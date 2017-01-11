@@ -1,10 +1,11 @@
-package lesson7;
+package NazarV.OldLessons.lesson7;
 
 import java.util.Scanner;
 
 /**
  * Created by Nazzi on 16.12.2016.
  */
+/*
 public class HomeWorkT2 {
     public static void main(String args[]) {
         Scanner input = new Scanner(System.in);
@@ -52,4 +53,4 @@ public class HomeWorkT2 {
         }
 
     }
-}
+}*/
