@@ -7,7 +7,7 @@ public class AccountTest {
     @Test
     public void numberTest(){
         Account ac = new Account();
-        int number  = 8427456878965623;
+        String number  = "8427456878965623";
         ac.setNumber(number);
         assertEquals(number,ac.getNumber());
     }
