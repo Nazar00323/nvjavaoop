@@ -4,7 +4,6 @@ package NazarV.lesson_15;
 public class Account {
     private String number;
     private int balance;
-    private int money;
 
     public String getNumber() {
         return number;
@@ -23,11 +22,10 @@ public class Account {
     }
 
     public void putMoney(int money) {
+        balance = balance + money;
     }
 
-    public int getMoney(int money) {
-        int sum = money;
-
-        return sum;
+    public void getMoney(int money) {
+        balance = balance - money;
     }
 }
