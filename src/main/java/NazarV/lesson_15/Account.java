@@ -1,6 +1,6 @@
 package NazarV.lesson_15;
 
-/*Task 1501 1502*/
+/*Task 1501 1502 1503*/
 public class Account {
     private String number;
     private int balance;
