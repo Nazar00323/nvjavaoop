@@ -8,8 +8,8 @@ public class Account {
     private String password;
 
     public Account(){
-        this.number = "-1";
-        this.balance = -1;
+        this.number = this.generateNumber();
+        this.balance = 0;
         this.password = "-1";
     }
 
@@ -54,5 +54,8 @@ public class Account {
 
     public String checkPassword() {
         return password;
+    }
+    public String generateNumber(){
+        return "1231243423453452456236";
     }
 }
