@@ -5,8 +5,7 @@ package NazarV.lesson_15;
 public class Account {
     private String number;
     private int balance;
-    private String Password;
-
+    private String password;
 
 
     public String getNumber() {
@@ -26,19 +25,19 @@ public class Account {
     }
 
     public void putMoney(int money) {
-        balance = balance + money;
+        this.balance = this.balance + money;
     }
 
     public void getMoney(int money) {
-        balance = balance - money;
+        this.balance = this.balance - money;
     }
 
 
-    public void setPassword(String N) {
-
+    public void setPassword(String pass) {
+        this.password = pass;
     }
 
     public String checkPassword() {
-        return  Password;
+        return password;
     }
 }

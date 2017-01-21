@@ -52,14 +52,14 @@ public class AccountTest {
         Random random = new Random();
         final String alphabet = "0123456789ABCDEFG";
         final int N = alphabet.length();
-        StringBuilder tempPassword = new StringBuilder();
+        StringBuilder tempPassword = new StringBuilder(8);
         //Тут генерується пароль із символів і цифр
         for (int i = 0; i < 8; i++) {
             tempPassword.append(String.valueOf(alphabet.charAt(random.nextInt(N))));
         }
 
         ac.setPassword(tempPassword.toString());
-        assertEquals(tempPassword, ac.checkPassword());
+        assertEquals(tempPassword.toString(), ac.checkPassword());
     }
 
 
