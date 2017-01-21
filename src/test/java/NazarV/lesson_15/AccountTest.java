@@ -9,17 +9,17 @@ import static org.junit.Assert.*;
 public class AccountTest {
     @Test
     public void numberTest() {
-        Account ac = new Account();
         String number = "8427456878965623";
-        ac.setNumber(number);
+        Account ac = new Account(number,0,"111");
+        //ac.setNumber(number);
         assertEquals(number, ac.getNumber());
     }
 
     @Test
     public void balanceTest() {
-        Account ac = new Account();
         int balance = 5000;
-        ac.setBalance(balance);
+        Account ac = new Account(balance);
+        //ac.setBalance(balance);
         assertEquals(balance, ac.getBalance());
     }
 
@@ -47,7 +47,6 @@ public class AccountTest {
     @Test
     //Task 1601
     public void passwordTest() throws Exception  {
-
         Account ac = new Account();
         Random random = new Random();
         final String alphabet = "0123456789ABCDEFG";
@@ -57,13 +56,8 @@ public class AccountTest {
         for (int i = 0; i < 8; i++) {
             tempPassword.append(String.valueOf(alphabet.charAt(random.nextInt(N))));
         }
-
         ac.setPassword(tempPassword.toString());
         assertEquals(tempPassword.toString(), ac.checkPassword());
     }
-
-
-
-
     //End Task 1601
 }

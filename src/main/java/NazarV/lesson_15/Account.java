@@ -7,6 +7,21 @@ public class Account {
     private int balance;
     private String password;
 
+    public Account(){
+        this.number = "-1";
+        this.balance = -1;
+        this.password = "-1";
+    }
+
+    public Account(String number, int balance, String password) {
+        this.number = number;
+        this.balance = balance;
+        this.password = password;
+    }
+
+    public Account(int balance) {
+        this.balance = balance;
+    }
 
     public String getNumber() {
         return number;
