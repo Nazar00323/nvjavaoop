@@ -7,7 +7,7 @@ import org.junit.Test;
 public class ClientTest {
     @Test
     // Task 1602
-    public void nameTest() {
+    public void nameTest() throws Exception{
         Client cl = new Client();
         String tempName = "Nazar";
         cl.setName(tempName);
@@ -17,7 +17,7 @@ public class ClientTest {
     // End Task 1602
     @Test
     // Task 1603
-    public void surnameTest() {
+    public void surnameTest() throws Exception{
         Client cl = new Client();
         String tempSurname = "Voychack";
         cl.setSurname(tempSurname);
@@ -27,7 +27,7 @@ public class ClientTest {
     // End Task 1603
     @Test
     // Task 1604
-    public void phoneTest() {
+    public void phoneTest() throws Exception{
         Client cl = new Client();
         String tempPhone = "0971073443";
         cl.setPhone(tempPhone);

@@ -45,15 +45,19 @@ public class AccountTest {
 
     @Test
     //Task 1601
-    public void passwordTest() {
+    public void passwordTest() throws Exception  {
+
         Account ac = new Account();
         Random random = new Random();
-        String tempPassword = "";
+        final String alphabet = "0123456789ABCDEFG";
+        final int N = alphabet.length();
+        StringBuilder tempPassword = new StringBuilder();
         //Тут генерується пароль із символів і цифр
         for (int i = 0; i < 8; i++) {
-            tempPassword.concat(random.toString());
+            tempPassword.append(String.valueOf(alphabet.charAt(random.nextInt(N))));
         }
-        ac.setPassword(tempPassword);
+
+        ac.setPassword(tempPassword.toString());
         assertEquals(tempPassword, ac.checkPassword());
     }
     //End Task 1601
