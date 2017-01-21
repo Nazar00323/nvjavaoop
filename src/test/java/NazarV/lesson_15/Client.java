@@ -1,31 +1,31 @@
 package NazarV.lesson_15;
 
 public class Client {
-    private String Name;
-    private String Surname;
-    private String Phone;
+    private String name;
+    private String surname;
+    private String phone;
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getSurname() {
-        return Surname;
+        return surname;
     }
 
     public void setSurname(String surname) {
-        Surname = surname;
+        this.surname = surname;
     }
 
     public String getPhone() {
-        return Phone;
+        return phone;
     }
 
     public void setPhone(String phone) {
-        Phone = phone;
+       this.phone = phone;
     }
 }
