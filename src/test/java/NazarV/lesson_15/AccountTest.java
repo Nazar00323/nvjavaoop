@@ -43,6 +43,7 @@ public class AccountTest {
         assertEquals(balance + money, ac.getBalance());
     }
 
+
     @Test
     //Task 1601
     public void passwordTest() throws Exception  {
@@ -60,5 +61,9 @@ public class AccountTest {
         ac.setPassword(tempPassword.toString());
         assertEquals(tempPassword, ac.checkPassword());
     }
+
+
+
+
     //End Task 1601
 }
