@@ -5,10 +5,10 @@ public class Client {
     private String surname;
     private String phone;
 
-   public Client() {
-        this.name = "Nazar";
-        this.surname = "Voychack";
-        this.phone = "380971073443";
+    public Client() {
+        this.name = "ClientName";
+        this.surname = "ClientSurname";
+        this.phone = "0971073443" ;
     }
 
     public Client(String name, String surname, String phone) {
@@ -17,8 +17,11 @@ public class Client {
         this.phone = phone;
     }
 
-
-
+    public Client(Client cl1) {
+        name = cl1.name;
+        surname = cl1.surname;
+        phone = cl1.phone;
+    }
 
     public String getName() {
         return name;
@@ -37,6 +40,7 @@ public class Client {
     }
 
     public String getPhone() {
+
         return phone;
     }
 

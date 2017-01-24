@@ -41,7 +41,7 @@ public class ClientTest {
         Client cl = new Client();
         assertEquals("ClientName",cl.getName());
         assertEquals("ClientSurname", cl.getSurname());
-        assertEquals(12,cl.getPhone().length());
+        assertEquals(10,cl.getPhone().length());
     }
 
     @Test
