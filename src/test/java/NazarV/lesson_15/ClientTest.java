@@ -34,4 +34,39 @@ public class ClientTest {
         assertEquals(tempPhone, cl.getPhone());
     }
     // End Task 1604
+
+    @Test
+    //TODO Task 1701
+    public void constructorTest()throws Exception{
+        Client cl = new Client();
+        assertEquals("ClientName",cl.getName());
+        assertEquals("ClientSurname", cl.getSurname());
+        assertEquals(12,cl.getPhone().length());
+    }
+
+    @Test
+    //TODO Task 1702
+    public void contructParamTest()throws Exception{
+        String name = "Nazar";
+        String surname = "Voychak";
+        String phone = "380971073443";
+
+        Client cl = new Client(name, surname, phone);
+        assertEquals(name,cl.getName());
+        assertEquals(surname, cl.getSurname());
+        assertEquals(phone,cl.getPhone());
+    }
+
+    @Test
+    //TODO Task 1703
+    public void constructCopyTest() throws Exception{
+        String name = "Nazar";
+        String surname = "Voychak";
+        String phone = "380971073443";
+
+        Client cl1 = new Client(name, surname, phone);
+        Client cl2 = new Client(cl1);
+        //Почитати що робить метод assertSame!!!
+        assertSame(cl1,cl2);
+    }
 }

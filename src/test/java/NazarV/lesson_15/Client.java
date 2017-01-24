@@ -5,6 +5,7 @@ public class Client {
     private String surname;
     private String phone;
 
+
     public String getName() {
         return name;
     }

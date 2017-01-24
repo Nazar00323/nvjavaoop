@@ -62,7 +62,6 @@ public class AccountTest {
     //End Task 1601
 
     @Test
-    // Task 1701
     public void generateNumberTest() throws Exception{
         Account ac = new Account();
         assertEquals(16, ac.getNumber().length());
