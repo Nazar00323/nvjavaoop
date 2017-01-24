@@ -58,16 +58,18 @@ public class ClientTest {
     }
 
     @Test
-    //Task 1703 - Later
-    public void constructCopyTest() throws Exception{
+    public void compositionTest() throws Exception{
         String name = "Nazar";
         String surname = "Voychak";
         String phone = "380971073443";
 
         Client cl1 = new Client(name, surname, phone);
-        Client cl2 = new Client(cl1);
-        //Почитати що робить метод assertSame!!!
-        assertEquals(cl1,cl2);
-        //assertSame(cl1,cl2);
+        Account ac1 = new Account();
+        cl1.setAccount(ac1);
+        assertEquals(ac1.getNumber(),cl1.getAccount().getNumber());
+
+        cl1.information();
+        System.out.println("");
+        ac1.information();
     }
 }

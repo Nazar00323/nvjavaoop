@@ -18,8 +18,8 @@ public class AccountTest {
     @Test
     public void balanceTest() {
         int balance = 5000;
-        Account ac = new Account(balance);
-        //ac.setBalance(balance);
+        Account ac = new Account();
+        ac.setBalance(balance);
         assertEquals(balance, ac.getBalance());
     }
 
@@ -65,5 +65,16 @@ public class AccountTest {
     public void generateNumberTest() throws Exception{
         Account ac = new Account();
         assertEquals(16, ac.getNumber().length());
+    }
+
+    @Test
+    public  void overloadSetNumberTest()throws Exception{
+        Account ac = new Account();
+        Account ac2 = new Account();
+        ac.setNumber();
+        ac2.setNumber("1231243423453452456236");
+        System.out.println("Card number 1 "+ac.getNumber());
+        System.out.println("Card number 2 "+ac2.getNumber());
+        assertEquals(ac.getNumber(), ac2.getNumber());
     }
 }

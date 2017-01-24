@@ -1,6 +1,7 @@
 package NazarV.lesson_15;
 
 public class Box {
+    static int volume = 5;
     private double width;
     private double height;
     private double depth;

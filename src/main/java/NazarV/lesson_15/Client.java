@@ -4,12 +4,12 @@ public class Client {
     private String name;
     private String surname;
     private String phone;
-
+    private Account clAc;
 
     public Client() {
         this.name = "ClientName";
         this.surname = "ClientSurname";
-        this.phone = "0971073443" ;
+        this.phone = "0971073443";
     }
 
     public Client(String name, String surname, String phone) {
@@ -18,13 +18,14 @@ public class Client {
         this.phone = phone;
     }
 
-    public Client(Client cl1) {
-        this.name = cl1.name;
-        this.surname = cl1.surname;
-        this.phone = cl1.phone;
+    public void setAccount(Account ac){
+        this.clAc = ac;
+    }
+    public Account getAccount(){
+        return this.clAc;
     }
 
-     String getName() {
+    public String getName() {
         return name;
     }
 
@@ -47,5 +48,12 @@ public class Client {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public void information(){
+        System.out.println("Client name: "+ this.name);
+        System.out.println("Client surname: "+ this.surname);
+        System.out.println("Client phone: "+ this.phone);
+        clAc.information();
     }
 }

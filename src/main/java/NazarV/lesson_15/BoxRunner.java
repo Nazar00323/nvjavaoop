@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class BoxRunner {
     public static void main(String[] args) {
+        Box b0;
         Box b1 = new Box();
         Box b2 = new Box();
         Scanner input = new Scanner(System.in);

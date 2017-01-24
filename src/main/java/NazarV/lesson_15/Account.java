@@ -1,7 +1,5 @@
 package NazarV.lesson_15;
 
-
-/*Task 1501 1502 1503*/
 public class Account {
     private String number;
     private int balance;
@@ -10,7 +8,7 @@ public class Account {
     public Account(){
         this.number = this.generateNumber();
         this.balance = 0;
-        this.password = "-1";
+        this.password = "11111111";
     }
 
     public Account(String number, int balance, String password) {
@@ -19,16 +17,20 @@ public class Account {
         this.password = password;
     }
 
-    public Account(int balance) {
-        this.balance = balance;
-    }
-
     public String getNumber() {
         return number;
     }
 
+    public void setNumber(){
+        this.number = "1231243423453452456236";
+    }
+
     public void setNumber(String number) {
         this.number = number;
+    }
+
+    public String generateNumber(){
+        return "1231243423453452456236";
     }
 
     public int getBalance() {
@@ -47,7 +49,6 @@ public class Account {
         this.balance = this.balance - money;
     }
 
-
     public void setPassword(String pass) {
         this.password = pass;
     }
@@ -55,7 +56,10 @@ public class Account {
     public String checkPassword() {
         return password;
     }
-    public String generateNumber(){
-        return "1231243423453452456236";
+
+    public void information(){
+        System.out.println("Card number :"+this.number);
+        System.out.println("Card balance :"+this.balance);
+        System.out.println("Card password :"+this.password);
     }
 }
