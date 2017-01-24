@@ -5,6 +5,12 @@ public class Client {
     private String surname;
     private String phone;
 
+   public Client() {
+        this.name = "Nazar";
+        this.surname = "Voychack";
+        this.phone = "380971073443";
+    }
+
 
     public String getName() {
         return name;
@@ -27,6 +33,6 @@ public class Client {
     }
 
     public void setPhone(String phone) {
-       this.phone = phone;
+        this.phone = phone;
     }
 }
