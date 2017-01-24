@@ -24,7 +24,13 @@ public class Client {
         phone = cl1.phone;
     }
 
-    public String getName() {
+    public Client(){
+        this.name = "Nazar";
+        this.surname ="Voychack";
+        this.phone = "0971073443";
+    }
+
+     String getName() {
         return name;
     }
 
