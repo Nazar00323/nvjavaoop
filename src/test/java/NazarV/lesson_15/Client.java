@@ -11,6 +11,14 @@ public class Client {
         this.phone = "380971073443";
     }
 
+    public Client(String name, String surname, String phone) {
+        this.name = name;
+        this.surname = surname;
+        this.phone = phone;
+    }
+
+
+
 
     public String getName() {
         return name;
