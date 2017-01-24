@@ -58,7 +58,7 @@ public class ClientTest {
     }
 
     @Test
-    //TODO Task 1703
+    //Task 1703 - Later
     public void constructCopyTest() throws Exception{
         String name = "Nazar";
         String surname = "Voychak";
@@ -67,6 +67,7 @@ public class ClientTest {
         Client cl1 = new Client(name, surname, phone);
         Client cl2 = new Client(cl1);
         //Почитати що робить метод assertSame!!!
-        assertSame(cl1,cl2);
+        assertEquals(cl1,cl2);
+        //assertSame(cl1,cl2);
     }
 }

@@ -19,9 +19,9 @@ public class Client {
     }
 
     public Client(Client cl1) {
-        name = cl1.name;
-        surname = cl1.surname;
-        phone = cl1.phone;
+        this.name = cl1.name;
+        this.surname = cl1.surname;
+        this.phone = cl1.phone;
     }
 
      String getName() {
