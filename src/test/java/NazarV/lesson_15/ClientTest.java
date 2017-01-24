@@ -45,7 +45,7 @@ public class ClientTest {
     }
 
     @Test
-    //TODO Task 1702
+    //Task 1702 - DONE
     public void contructParamTest()throws Exception{
         String name = "Nazar";
         String surname = "Voychak";
