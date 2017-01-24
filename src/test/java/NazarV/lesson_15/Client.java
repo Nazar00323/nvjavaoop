@@ -4,7 +4,7 @@ public class Client {
     private String name;
     private String surname;
     private String phone;
-    
+
 
     public Client() {
         this.name = "ClientName";
@@ -22,12 +22,6 @@ public class Client {
         name = cl1.name;
         surname = cl1.surname;
         phone = cl1.phone;
-    }
-
-    public Client(){
-        this.name = "Nazar";
-        this.surname ="Voychack";
-        this.phone = "0971073443";
     }
 
      String getName() {

@@ -36,7 +36,7 @@ public class ClientTest {
     // End Task 1604
 
     @Test
-    //TODO Task 1701
+    //Task 1701 - DONE
     public void constructorTest()throws Exception{
         Client cl = new Client();
         assertEquals("ClientName",cl.getName());
