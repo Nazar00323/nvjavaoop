@@ -4,9 +4,14 @@ public class Client {
     private String name;
     private String surname;
     private String phone;
-    
 
-    public String getName() {
+    public Client(){
+        this.name = "Nazar";
+        this.surname ="Voychack";
+        this.phone = "0971073443";
+    }
+
+     String getName() {
         return name;
     }
 
