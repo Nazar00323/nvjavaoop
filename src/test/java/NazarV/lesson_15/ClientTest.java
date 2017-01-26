@@ -72,4 +72,12 @@ public class ClientTest {
         System.out.println("");
         ac1.information();
     }
+    @Test //TODO 1802
+    public void phoneNumberTest() throws Exception{
+        Client cl1 = new Client();
+        String testPhone1 = "0971073443";
+        String testPhone2 = "380971073443";
+        assertEquals("Incorect phone number format",cl1.setPhone(testPhone1));
+        assertEquals("Number was setup",cl1.setPhone(testPhone2));
+    }
 }
