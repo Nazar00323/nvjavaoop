@@ -1,11 +1,13 @@
 package NazarV.lesson_15;
 
+import java.util.Random;
+
 public class Account {
     private String number;
     private int balance;
     private String password;
 
-    public Account(){
+    public Account() {
         this.number = this.generateNumber();
         this.balance = 0;
         this.password = "11111111";
@@ -21,15 +23,32 @@ public class Account {
         return number;
     }
 
-    public void setNumber(){
+    public void setNumber() {
         this.number = "1231243423453452456236";
+    }
+
+    public String generateVCNumber() {
+        Random random = new Random();
+        final String alphabet = "0123456789";
+        final int N = alphabet.length();
+        int size = 16;
+        StringBuilder tempNumber = new StringBuilder(size);
+
+        for (int i = 0; i < size; i++) {
+            tempNumber.append(String.valueOf(alphabet.charAt(random.nextInt(N))));
+        }
+
+        tempNumber.setCharAt(0, '4');
+        this.number = tempNumber.toString();
+
+        return tempNumber.toString();
     }
 
     public void setNumber(String number) {
         this.number = number;
     }
 
-    public String generateNumber(){
+    public String generateNumber() {
         return "1231243423453452456236";
     }
 
@@ -57,9 +76,9 @@ public class Account {
         return password;
     }
 
-    public void information(){
-        System.out.println("Card number :"+this.number);
-        System.out.println("Card balance :"+this.balance);
-        System.out.println("Card password :"+this.password);
+    public void information() {
+        System.out.println("Card number :" + this.number);
+        System.out.println("Card balance :" + this.balance);
+        System.out.println("Card password :" + this.password);
     }
 }

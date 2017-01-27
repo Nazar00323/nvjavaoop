@@ -18,10 +18,11 @@ public class Client {
         this.phone = phone;
     }
 
-    public void setAccount(Account ac){
+    public void setAccount(Account ac) {
         this.clAc = ac;
     }
-    public Account getAccount(){
+
+    public Account getAccount() {
         return this.clAc;
     }
 
@@ -46,14 +47,17 @@ public class Client {
         return phone;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public String setPhone(String phone) {
+        if (phone.length() == 12) {
+            this.phone = phone;
+            return "Number was setup";
+        }else return "Incorect phone number format";
     }
 
-    public void information(){
-        System.out.println("Client name: "+ this.name);
-        System.out.println("Client surname: "+ this.surname);
-        System.out.println("Client phone: "+ this.phone);
+    public void information() {
+        System.out.println("Client name: " + this.name);
+        System.out.println("Client surname: " + this.surname);
+        System.out.println("Client phone: " + this.phone);
         clAc.information();
     }
 }

@@ -78,11 +78,11 @@ public class AccountTest {
         assertEquals(ac.getNumber(), ac2.getNumber());
     }
 
-    @Test //TODO Task 1801
+    @Test // Task 1801 - Done
     public void generateVisaCardNumber() throws Exception{
         Account ac = new Account();
-        ac.generateVCNumber();
+        //ac.generateVCNumber();
         assertEquals(16, ac.generateVCNumber().length());
-        assertEquals("4", String.valueOf(ac.getCardNumber().charAt(0)));
+        assertEquals("4", String.valueOf(ac.getNumber().charAt(0)));
     }
 }
