@@ -8,7 +8,7 @@ public class Account {
     private String password;
 
     public Account() {
-        this.number = this.generateNumber();
+        this.number = this.generateVCNumber();
         this.balance = 0;
         this.password = "11111111";
     }
@@ -48,9 +48,7 @@ public class Account {
         this.number = number;
     }
 
-    public String generateNumber() {
-        return "1231243423453452456236";
-    }
+
 
     public int getBalance() {
         return balance;

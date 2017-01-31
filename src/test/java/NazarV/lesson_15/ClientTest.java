@@ -62,11 +62,11 @@ public class ClientTest {
         String name = "Nazar";
         String surname = "Voychak";
         String phone = "380971073443";
-
-        Client cl1 = new Client(name, surname, phone);
         Account ac1 = new Account();
-        cl1.setAccount(ac1);
-        assertEquals(ac1.getNumber(),cl1.getAccount().getNumber());
+        Client cl1 = new Client(name, surname, phone, ac1);
+
+        //cl1.setAccount(ac1);
+        //assertEquals(ac1.getNumber(),cl1.getAccount().getNumber());
 
         cl1.information();
         System.out.println("");
