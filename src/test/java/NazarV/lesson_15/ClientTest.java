@@ -72,7 +72,7 @@ public class ClientTest {
         System.out.println("");
         ac1.information();
     }
-    @Test //TODO 1802
+    @Test
     public void phoneNumberTest() throws Exception{
         Client cl1 = new Client();
         String testPhone1 = "0971073443";

@@ -23,6 +23,7 @@ public class Account {
         return number;
     }
 
+    //TODO Refactoring Example for lesson 21
     public void setNumber() {
         this.number = "1231243423453452456236";
     }
@@ -47,8 +48,6 @@ public class Account {
     public void setNumber(String number) {
         this.number = number;
     }
-
-
 
     public int getBalance() {
         return balance;

@@ -66,8 +66,6 @@ public class AccountTest {
         Account ac0;
         Account ac = new Account();
         assertEquals(16, ac.getNumber().length());
-
-        int[] Array;
     }
 
     @Test

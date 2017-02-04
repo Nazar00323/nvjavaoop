@@ -31,8 +31,6 @@ public class AccountsTest {
             accArray[i].information();
             System.out.println("-------------------");
         }
-
         example();
-
     }
 }
