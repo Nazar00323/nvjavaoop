@@ -63,7 +63,6 @@ public class AccountTest {
 
     @Test
     public void generateNumberTest() throws Exception{
-        Account ac0;
         Account ac = new Account();
         assertEquals(16, ac.getNumber().length());
     }
@@ -79,11 +78,11 @@ public class AccountTest {
         assertEquals(ac.getNumber(), ac2.getNumber());
     }
 
-    @Test // Task 1801 - Done
+    @Test //TODO Task 1801
     public void generateVisaCardNumber() throws Exception{
         Account ac = new Account();
-        //ac.generateVCNumber();
+        ac.generateVCNumber();
         assertEquals(16, ac.generateVCNumber().length());
-        assertEquals("4", String.valueOf(ac.getNumber().charAt(0)));
+        assertEquals("4", String.valueOf(ac.getCardNumber().charAt(0)));
     }
 }

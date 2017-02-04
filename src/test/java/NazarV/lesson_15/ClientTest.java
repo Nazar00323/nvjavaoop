@@ -80,4 +80,5 @@ public class ClientTest {
         assertEquals("Incorect phone number format",cl1.setPhone(testPhone1));
         assertEquals("Number was setup",cl1.setPhone(testPhone2));
     }
+
 }
