@@ -5,18 +5,18 @@ import java.util.Random;
 public class BubbleSort {
     private int sizeArr;
     private int[] numbers;
-    private int time;
+    private long sortTime;
 
     public BubbleSort() {
         this.sizeArr = 100;
         this.numbers = new int[this.sizeArr];
-        this.time = 0;
+        this.sortTime = 0;
     }
 
     public BubbleSort(int sizeArr) {
         this.sizeArr = sizeArr;
         this.numbers = new int[this.sizeArr];
-        this.time = 0;
+        this.sortTime = 0;
 
     }
 
@@ -30,6 +30,9 @@ public class BubbleSort {
     public void sort() {
         boolean swapped = true;
         int z = 0;
+
+        long start = System.currentTimeMillis();
+
         while (swapped) {
             swapped = false;
             for (int i = 0; i < numbers.length - 1 - z; i++) {
@@ -42,6 +45,8 @@ public class BubbleSort {
             }
             z++;
         }
+        long end = System.currentTimeMillis();
+        this.sortTime = end - start;
     }
 
     public void show() {
@@ -49,6 +54,9 @@ public class BubbleSort {
             System.out.print(this.numbers[i] + " ");
         }
         System.out.println("");
+    }
+    public void showTime(){
+        System.out.println("Sort time "+ this.sortTime );
     }
 
 

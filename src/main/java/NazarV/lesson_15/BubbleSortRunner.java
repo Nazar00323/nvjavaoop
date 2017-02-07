@@ -14,13 +14,32 @@ public class BubbleSortRunner {
         b4.generateArr(1000);
         b5.generateArr(1000);
 
-        b1.show();
-        //b2.show();
-        //b3.show();
-        //b4.show();
-        //b5.show();
 
         b1.sort();
-        b1.show();
+        System.out.print("B1 - ");
+        b1.showTime();
+
+        b2.sort();
+        System.out.print("B2 - ");
+        b2.showTime();
+
+        b3.sort();
+        System.out.print("B3 - ");
+        b3.showTime();
+
+        b4.sort();
+        System.out.print("B4- ");
+        b4.showTime();
+
+        b5.sort();
+        System.out.print("B5 - ");
+        b5.showTime();
+
+
+
+
+
+
+
     }
 }
