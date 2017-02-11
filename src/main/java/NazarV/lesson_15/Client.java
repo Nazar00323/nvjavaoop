@@ -1,20 +1,16 @@
 package NazarV.lesson_15;
 
-public class Client {
-    private String name;
-    private String surname;
+public class Client extends Human {
     private String phone;
     private Account clAc;
 
     public Client() {
-        this.name = "ClientName";
-        this.surname = "ClientSurname";
+        super();
         this.phone = "0971073443";
     }
 
     public Client(String name, String surname, String phone) {
-        this.name = name;
-        this.surname = surname;
+        super(name, surname);
         this.phone = phone;
     }
 
@@ -25,24 +21,7 @@ public class Client {
         return this.clAc;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
     public String getPhone() {
-
         return phone;
     }
 
@@ -51,9 +30,11 @@ public class Client {
     }
 
     public void information(){
-        System.out.println("Client name: "+ this.name);
-        System.out.println("Client surname: "+ this.surname);
+        System.out.println("Client name: "+ this.getName());
+        System.out.println("Client surname: "+ this.getSurname());
         System.out.println("Client phone: "+ this.phone);
         clAc.information();
     }
 }
+
+//Employee id phone salary

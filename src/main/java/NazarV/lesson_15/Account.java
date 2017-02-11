@@ -1,7 +1,5 @@
 package NazarV.lesson_15;
 
-import java.util.BitSet;
-
 public class Account {
     private String number;
     private int balance;

@@ -10,9 +10,9 @@ public class BubbleSortRunner {
 
         b1.generateArr(1000);
         b2.generateArr(1000);
-        b3.generateArr(1000);
-        b4.generateArr(1000);
-        b5.generateArr(1000);
+        //b3.generateArr(1000);
+        //b4.generateArr(1000);
+        //b5.generateArr(1000);
 
 
         b1.sort();
