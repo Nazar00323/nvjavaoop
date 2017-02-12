@@ -1,10 +1,7 @@
 package NazarV.lesson_15;
 
+import NazarV.bank.Account;
 import org.junit.Test;
-
-import java.util.Random;
-
-import static org.junit.Assert.*;
 
 public class AccountsTest {
     public static void example(){

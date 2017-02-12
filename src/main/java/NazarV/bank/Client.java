@@ -1,4 +1,4 @@
-package NazarV.lesson_15;
+package NazarV.bank;
 
 public class Client extends Human {
     private String phone;
@@ -37,4 +37,3 @@ public class Client extends Human {
     }
 }
 
-//Employee id phone salary

@@ -1,4 +1,4 @@
-package NazarV.lesson_15;
+package NazarV.bank;
 
 public class Account {
     private String number;

@@ -1,5 +1,6 @@
 package NazarV.lesson_15;
 
+import NazarV.bank.Account;
 import org.junit.Test;
 
 import java.util.Random;

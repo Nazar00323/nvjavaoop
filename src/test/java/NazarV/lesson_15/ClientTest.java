@@ -2,6 +2,8 @@ package NazarV.lesson_15;
 
 import static org.junit.Assert.*;
 
+import NazarV.bank.Account;
+import NazarV.bank.Client;
 import org.junit.Test;
 
 public class ClientTest {

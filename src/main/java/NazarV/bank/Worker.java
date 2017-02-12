@@ -1,6 +1,4 @@
-package NazarV.lesson22;
-
-import NazarV.lesson_15.Human;
+package NazarV.bank;
 
 public class Worker extends Human{
     private String id;
@@ -12,12 +10,6 @@ public class Worker extends Human{
         this.id = "4536473524374562";
         this.phone = "390680363051";
         this.salary = "5000";
-    }
-
-    public Worker(String id, String phone, String salary) {
-        this.id = id;
-        this.phone = phone;
-        this.salary = salary;
     }
 
     public Worker(String name, String surname, String id, String phone, String salary) {
@@ -49,5 +41,14 @@ public class Worker extends Human{
 
     public void setSalary(String salary) {
         this.salary = salary;
+    }
+
+    public String toString(){
+        return "Worker [name = "+ this.getName()
+                + " surname = " + this.getSurname()
+                + " id = " + this.id
+                + " phone = " + this.phone
+                + " salary = " + this.salary
+                + "]";
     }
 }
