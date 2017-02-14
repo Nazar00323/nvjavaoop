@@ -1,8 +1,5 @@
 package NazarV.lesson22;
 
-import java.util.Timer;
-
-
 public class StopWatch {
     private long time;
     private long startTime;
