@@ -1,5 +1,7 @@
 package NazarV.bank;
 
+import java.util.Scanner;
+
 public class Client extends Human {
     private String phone;
     private Account clAc;
@@ -14,10 +16,11 @@ public class Client extends Human {
         this.phone = phone;
     }
 
-    public void setAccount(Account ac){
+    public void setAccount(Account ac) {
         this.clAc = ac;
     }
-    public Account getAccount(){
+
+    public Account getAccount() {
         return this.clAc;
     }
 
@@ -29,11 +32,17 @@ public class Client extends Human {
         this.phone = phone;
     }
 
-    public void information(){
-        System.out.println("Client name: "+ this.getName());
-        System.out.println("Client surname: "+ this.getSurname());
-        System.out.println("Client phone: "+ this.phone);
-        clAc.information();
+    public void setPhone() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Введіть номер телефону : ");
+        this.phone = input.next();
+    }
+
+    public void information() {
+        System.out.println("Client name: " + this.getName());
+        System.out.println("Client surname: " + this.getSurname());
+        System.out.println("Client phone: " + this.phone);
+        //clAc.information();
     }
 }
 

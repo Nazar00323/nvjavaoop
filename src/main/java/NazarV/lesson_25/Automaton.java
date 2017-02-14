@@ -1,4 +1,4 @@
-package NazarV.lesson25;
+package NazarV.lesson_25;
 
 public class Automaton extends Weapon {
 

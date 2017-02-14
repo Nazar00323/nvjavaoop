@@ -1,6 +1,4 @@
-package NazarV.lesson25;
-
-import static org.junit.Assert.*;
+package NazarV.lesson_25;
 
 import org.junit.Test;
 

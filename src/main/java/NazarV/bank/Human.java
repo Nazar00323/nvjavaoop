@@ -1,5 +1,7 @@
 package NazarV.bank;
 
+import java.util.Scanner;
+
 public class Human {
     private String name;
     private String surname;
@@ -22,11 +24,33 @@ public class Human {
         this.name = name;
     }
 
+    public void setName(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Введіть ім'я ");
+        this.name = input.next();
+    }
+
+    public void setName(Human hm){
+        this.name = hm.name;
+    }
+
     public String getSurname() {
         return surname;
     }
 
     public void setSurname(String surname) {
         this.surname = surname;
+    }
+
+    public void setSurname(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Введіть прізвище: ");
+        this.surname = input.next();
+    }
+
+    public  String toString(){
+        return "Human [name = "+ this.getName()
+                + " surname = " + this.getSurname()
+                + "]";
     }
 }

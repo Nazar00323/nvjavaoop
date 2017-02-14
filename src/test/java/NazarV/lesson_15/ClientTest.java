@@ -5,11 +5,12 @@ import static org.junit.Assert.*;
 import NazarV.bank.Account;
 import NazarV.bank.Client;
 import org.junit.Test;
+import sun.tools.jar.CommandLine;
 
 public class ClientTest {
     @Test
     // Task 1602
-    public void nameTest() throws Exception{
+    public void nameTest() throws Exception {
         Client cl = new Client();
         String tempName = "Nazar";
         cl.setName(tempName);
@@ -19,7 +20,7 @@ public class ClientTest {
     // End Task 1602
     @Test
     // Task 1603
-    public void surnameTest() throws Exception{
+    public void surnameTest() throws Exception {
         Client cl = new Client();
         String tempSurname = "Voychack";
         cl.setSurname(tempSurname);
@@ -29,7 +30,7 @@ public class ClientTest {
     // End Task 1603
     @Test
     // Task 1604
-    public void phoneTest() throws Exception{
+    public void phoneTest() throws Exception {
         Client cl = new Client();
         String tempPhone = "0971073443";
         cl.setPhone(tempPhone);
@@ -39,48 +40,48 @@ public class ClientTest {
 
     @Test
     //Task 1701 - DONE
-    public void constructorTest()throws Exception{
+    public void constructorTest() throws Exception {
         Client cl = new Client();
-        assertEquals("ClientName",cl.getName());
+        assertEquals("ClientName", cl.getName());
         assertEquals("ClientSurname", cl.getSurname());
-        assertEquals(10,cl.getPhone().length());
+        assertEquals(10, cl.getPhone().length());
     }
 
     @Test
     //Task 1702 - DONE
-    public void contructParamTest()throws Exception{
+    public void contructParamTest() throws Exception {
         String name = "Nazar";
         String surname = "Voychak";
         String phone = "380971073443";
 
         Client cl = new Client(name, surname, phone);
-        assertEquals(name,cl.getName());
+        assertEquals(name, cl.getName());
         assertEquals(surname, cl.getSurname());
-        assertEquals(phone,cl.getPhone());
+        assertEquals(phone, cl.getPhone());
     }
 
     @Test
-    public void compositionTest() throws Exception{
+    public void compositionTest() throws Exception {
         String name = "Nazar";
         String surname = "Voychak";
         String phone = "380971073443";
         Account ac1 = new Account();
-       // Client cl1 = new Client(name, surname, phone, ac1);
+        // Client cl1 = new Client(name, surname, phone, ac1);
 
         //cl1.setAccount(ac1);
         //assertEquals(ac1.getNumber(),cl1.getAccount().getNumber());
 
-       // cl1.information();
+        // cl1.information();
         System.out.println("");
         ac1.information();
     }
+
     @Test
-    public void phoneNumberTest() throws Exception{
+    public void phoneNumberTest() throws Exception {
         Client cl1 = new Client();
         String testPhone1 = "0971073443";
         String testPhone2 = "380971073443";
-       // assertEquals("Incorect phone number format",cl1.setPhone(testPhone1));
+        // assertEquals("Incorect phone number format",cl1.setPhone(testPhone1));
         //assertEquals("Number was setup",cl1.setPhone(testPhone2));
     }
-
 }

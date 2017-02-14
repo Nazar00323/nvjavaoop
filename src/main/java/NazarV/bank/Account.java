@@ -1,5 +1,7 @@
 package NazarV.bank;
 
+import java.util.Scanner;
+
 public class Account {
     private String number;
     private int balance;
@@ -45,12 +47,25 @@ public class Account {
         this.balance = this.balance + money;
     }
 
+   public void putMoney (){
+       Scanner input = new Scanner(System.in);
+       System.out.println("Введіть суму:");
+       this.balance =  this.balance + input.nextInt();
+   }
+
     public void getMoney(int money) {
         this.balance = this.balance - money;
     }
 
     public void setPassword(String pass) {
         this.password = pass;
+    }
+
+    public void setPassword(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Введіть пароль:");
+        this.password  = input.next();
+
     }
 
     public String checkPassword() {

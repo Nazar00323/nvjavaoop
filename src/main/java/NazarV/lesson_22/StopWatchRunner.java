@@ -1,4 +1,4 @@
-package NazarV.lesson22;
+package NazarV.lesson_22;
 
 import java.util.Scanner;
 
