@@ -4,7 +4,7 @@ public class Weapon {
     private int shoot;
 
     public Weapon() {
-        this.shoot = -1;
+        this.shoot = 100;
     }
 
     public Weapon(int shoot) {
@@ -21,5 +21,12 @@ public class Weapon {
 
     public void setShoot(int shoot) {
         this.shoot = shoot;
+    }
+    public String toString(){
+        return " Weapon [shoot = "+ this.getShoot()+
+                " Automaton [shoot = "+ this.getShoot()+
+                " Pistol [shoot = "+ this.getShoot()+
+                " Bow [shoot =  "+ this.getShoot()
+                + "]";
     }
 }

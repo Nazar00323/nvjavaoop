@@ -22,5 +22,7 @@ public class WeaponTest {
         for (Weapon element : staff) {
             System.out.println(element.toString());
         }
+
+
     }
 }
