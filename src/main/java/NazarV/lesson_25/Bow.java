@@ -9,5 +9,10 @@ public class Bow extends Weapon {
     public Bow(int shoot) {
         super(shoot);
     }
+
+    @Override
+    public  void shoot(){
+        System.out.println("Bow ---- стріляє");
+    }
 }
 

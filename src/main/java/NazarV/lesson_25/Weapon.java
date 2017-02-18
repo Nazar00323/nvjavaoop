@@ -23,10 +23,7 @@ public class Weapon {
         this.shoot = shoot;
     }
     public String toString(){
-        return " Weapon [shoot = "+ this.getShoot()+
-                " Automaton [shoot = "+ this.getShoot()+
-                " Pistol [shoot = "+ this.getShoot()+
-                " Bow [shoot =  "+ this.getShoot()
+        return " Weapon [shoot = "+ this.getShoot()
                 + "]";
     }
 }

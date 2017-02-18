@@ -3,16 +3,16 @@ package NazarV.bank;
 public class Worker extends Human{
     private String id;
     private String phone;
-    private String salary;
+    private double salary;
 
     public Worker() {
         super();
         this.id = "4536473524374562";
         this.phone = "390680363051";
-        this.salary = "5000";
+        this.salary = 5000;
     }
 
-    public Worker(String name, String surname, String id, String phone, String salary) {
+    public Worker(String name, String surname, String id, String phone, double salary) {
         super(name, surname);
         this.id = id;
         this.phone = phone;
@@ -35,12 +35,18 @@ public class Worker extends Human{
         this.phone = phone;
     }
 
-    public String getSalary() {
+    public double getSalary() {
         return salary;
     }
 
-    public void setSalary(String salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
+    }
+
+    // Встановлення преміальних виплат робітникам
+    public void setBonus(){
+        //salary = salary + salary*0.2;
+        salary+=salary*0.15;
     }
 
     public String toString(){

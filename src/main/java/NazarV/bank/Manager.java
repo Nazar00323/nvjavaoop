@@ -5,9 +5,15 @@ public class Manager extends Worker {
         super();
     }
 
-    public Manager(String name, String surname, String id, String phone, String salary) {
+    public Manager(String name, String surname, String id, String phone, double salary) {
         super(name, surname, id, phone, salary);
     }
+    @Override
+    public void setBonus(){
+        setSalary(getSalary() + getSalary()*0.25);
+        //salary+=salary*0.25;
+    }
+
     public String toString(){
         return "Manager [name = "+ this.getName()
                 + " surname = " + this.getSurname()

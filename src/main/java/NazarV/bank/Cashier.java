@@ -8,13 +8,18 @@ public class Cashier extends Worker {
         this.cashNumber = -1;
     }
 
-    public Cashier(String name, String surname, String id, String phone, String salary, int cashNumber) {
+    public Cashier(String name, String surname, String id, String phone, double salary, int cashNumber) {
         super(name, surname, id, phone, salary);
         this.cashNumber = cashNumber;
     }
 
     public int getCashNumber() {
         return cashNumber;
+    }
+
+    @Override
+    public void setBonus(){
+        setSalary(getSalary()+getSalary()*0.17);
     }
 
     public void setCashNumber(int cashNumber) {

@@ -10,15 +10,26 @@ public class HumanTest {
     // Обєкт підкласу можна використовувати замість любого обєкту суперкласу
     public void polimorfizmTest() throws Exception{
 
-        Worker wk1; // поліморфна змінна
-        wk1 = new Worker();
-        wk1 = new Cashier();
-        wk1 = new Manager();
+        //Worker wk1; // поліморфна змінна
+        /*Worker wk1  = new Worker();
+        Cashier ch1 = new Cashier();
+        Manager mn1 = new Manager();
 
-        Worker[] staff = new Worker[3];
+        wk1.setBonus();
+        ch1.setBonus();
+        mn1.setBonus();*/
+
+        Worker[] staff = new Worker[6];
         staff[0] = new Worker();
-        staff[1] = new Cashier();
-        staff[2] = new Manager();
+        staff[1] = new Worker();
+        staff[2] = new Cashier();
+        staff[3] = new Cashier();
+        staff[4] = new Manager();
+        staff[5] = new Manager();
+
+        for (int i = 0; i < staff.length; i++) {
+            staff[i].setBonus();
+        }
 
         for(Worker element: staff){
             System.out.println(element.toString());
