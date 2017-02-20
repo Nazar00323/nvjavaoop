@@ -79,7 +79,7 @@ public class AccountTest {
         assertEquals(ac.getNumber(), ac2.getNumber());
     }
 
-    @Test //TODO Task 1801
+    @Test
     public void generateVisaCardNumber() throws Exception{
         Account ac = new Account();
         //ac.generateVCNumber();
