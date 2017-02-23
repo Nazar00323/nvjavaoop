@@ -41,6 +41,9 @@ public class Human {
     public void setSurname(String surname) {
         this.surname = surname;
     }
+    public void setSurname(String surname, int id) {
+        this.surname = surname;
+    }
 
     public void setSurname(){
         Scanner input = new Scanner(System.in);

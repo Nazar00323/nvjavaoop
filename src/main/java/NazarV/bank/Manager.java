@@ -8,19 +8,20 @@ public class Manager extends Worker {
     public Manager(String name, String surname, String id, String phone, double salary) {
         super(name, surname, id, phone, salary);
     }
+
     @Override
-    public void setBonus(){
-        setSalary(getSalary() + getSalary()*0.25);
+    public void setBonus() {
+        setSalary(getSalary() + getSalary() * 0.25);
         //salary+=salary*0.25;
     }
 
     @Override
     public void decreaseSalary() {
-        setSalary(getSalary()-getSalary()*0.15);
+        setSalary(getSalary() - getSalary() * 0.15);
     }
 
-    public String toString(){
-        return "Manager [name = "+ this.getName()
+    public String toString() {
+        return "Manager [name = " + this.getName()
                 + " surname = " + this.getSurname()
                 + " id = " + this.getId()
                 + " phone = " + this.getPhone()

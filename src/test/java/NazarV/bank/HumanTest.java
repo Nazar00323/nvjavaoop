@@ -37,24 +37,45 @@ public class HumanTest {
     }
 
     @Test //TODO Task 2601
-    public void testRaiseSalary()throws  Exception{
+    public void testRaiseSalary() throws Exception {
         Worker staff[] = {new Worker(), new Cashier(), new Manager()};
 
-        for (Worker element : staff){
-           element.decreaseSalary();
+        for (Worker element : staff) {
+            element.decreaseSalary();
         }
 
-        for (int i = 0; i <staff.length ; i++) {
+        for (int i = 0; i < staff.length; i++) {
             double koef = 0;
-            switch (i){
-                case 0: koef = 0.05;
-                case 1: koef = 0.10;
-                case 2: koef = 0.15;
+            switch (i) {
+                case 0:
+                    koef = 0.05;
+                    break;
+                case 1:
+                    koef = 0.10;
+                    break;
+                case 2:
+                    koef = 0.15;
+                    break;
             }
-            double restoredValue = staff[i].getSalary()+staff[i].getSalary()*koef;
+            double restoredValue = staff[i].getSalary() + staff[i].getSalary() * koef;
             double actualValue = staff[i].getSalary();
 
-            assertEquals(restoredValue,actualValue, restoredValue*koef);
+            assertEquals(restoredValue, actualValue, restoredValue * koef);
         }
+    }
+
+    @Test
+    public void callMethodTest() throws Exception {
+        Human hm = new Human();
+        hm.setSurname();
+        hm.setSurname("Nazar");
+        hm.setSurname("Nazar", 1);
+        /*
+        1. Перевірка типу обєкту. -> 2
+        2. Перевірка імені методу -> Отримується список методів класу ->
+        3. Перевірка аргументів які передаються в метод
+        4. Динамічне звязування - метод який викликається визначається
+         */
+
     }
 }
