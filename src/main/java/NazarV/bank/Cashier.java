@@ -22,6 +22,11 @@ public class Cashier extends Worker {
         setSalary(getSalary()+getSalary()*0.17);
     }
 
+    @Override
+    public void decreaseSalary() {
+        setSalary(getSalary()-getSalary()*0.10);
+    }
+
     public void setCashNumber(int cashNumber) {
         this.cashNumber = cashNumber;
     }

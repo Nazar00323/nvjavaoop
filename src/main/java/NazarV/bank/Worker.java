@@ -50,6 +50,7 @@ public class Worker extends Human{
     }
 
     public void decreaseSalary(){
+        salary-=salary*0.05;
 
     }
 

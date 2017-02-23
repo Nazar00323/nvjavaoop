@@ -14,6 +14,11 @@ public class Manager extends Worker {
         //salary+=salary*0.25;
     }
 
+    @Override
+    public void decreaseSalary() {
+        setSalary(getSalary()-getSalary()*0.15);
+    }
+
     public String toString(){
         return "Manager [name = "+ this.getName()
                 + " surname = " + this.getSurname()
