@@ -41,7 +41,7 @@ public class HumanTest {
         Worker staff[] = {new Worker(), new Cashier(), new Manager()};
 
         for (Worker element : staff){
-           element.raiseSalary();
+           element.decreaseSalary();
         }
 
         for (int i = 0; i <staff.length ; i++) {

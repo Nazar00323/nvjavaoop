@@ -49,6 +49,11 @@ public class Worker extends Human{
         salary+=salary*0.15;
     }
 
+    public void decreaseSalary(){
+
+    }
+
+
     public String toString(){
         return "Worker [name = "+ this.getName()
                 + " surname = " + this.getSurname()
