@@ -57,6 +57,13 @@ public class Account {
         this.balance = this.balance - money;
     }
 
+    public void getMoney() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Введіть суму:");
+        this.balance = this.balance + input.nextInt();
+    }
+
+
     public void setPassword(String pass) {
         this.password = pass;
     }
@@ -65,7 +72,6 @@ public class Account {
         Scanner input = new Scanner(System.in);
         System.out.println("Введіть пароль:");
         this.password = input.next();
-
     }
 
     public String checkPassword() {
@@ -77,4 +83,5 @@ public class Account {
         System.out.println("Card balance :" + this.balance);
         System.out.println("Card password :" + this.password);
     }
+
 }
