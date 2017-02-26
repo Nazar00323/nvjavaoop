@@ -33,6 +33,7 @@ public class CreditCard extends Card {
     public void setValidation(int validation) {
         this.validation = validation;
     }
+
     public String toString() {
 
         return "CreditCard [validity = " + this.getValidity()

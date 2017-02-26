@@ -30,9 +30,8 @@ public class Card extends Account {
     public void setCvc(int cvc) {
         this.cvc = cvc;
     }
+
     public  String toString(){
-
-
         return "CreditCard [month = " + this.getMonth()
                 + " year = " + this.getYear()
                 + " cvc = " + this.getCvc()
