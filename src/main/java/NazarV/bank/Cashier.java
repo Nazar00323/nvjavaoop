@@ -30,6 +30,7 @@ public class Cashier extends Worker {
     public void setCashNumber(int cashNumber) {
         this.cashNumber = cashNumber;
     }
+
     public String toString(){
         return "Cashier [name = "+ this.getName()
                 + " surname = " + this.getSurname()
