@@ -1,29 +1,28 @@
 package NazarV.bank;
 
-/**
- * Created by NAZZIK on 25.02.2017.
- */
+
 public class CreditCard extends Card {
-    private  int validity;
-    private  int validation;
+    private int expDate;
+    private int validation;
 
     public CreditCard() {
         super();
-        this.validity = -1;
+        this.expDate = -1;
         this.validation = -1;
     }
 
+
     public CreditCard(int validity, int validation) {
-        this.validity = validity;
+        this.expDate = validity;
         this.validation = validation;
     }
 
-    public int getValidity() {
-        return validity;
+    public int getExpDate() {
+        return expDate;
     }
 
-    public void setValidity(int validity) {
-        this.validity = validity;
+    public void setExpDate(int expDate) {
+        this.expDate = expDate;
     }
 
     public int getValidation() {
@@ -36,11 +35,10 @@ public class CreditCard extends Card {
 
     public String toString() {
 
-        return "CreditCard [validity = " + this.getValidity()
+        return "CreditCard [expDate = " + this.getExpDate()
                 + " validation = " + this.getValidation()
                 + " month = " + this.getMonth()
-                + " year = " + this.getYear()
-                + " cvc = " + this.getCvc() + "]";
+                + " year = " + this.getYear() + "]";
     }
 
 

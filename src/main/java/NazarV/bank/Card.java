@@ -5,7 +5,18 @@ public class Card extends Account {
 
     private int month;
     private int year;
-    private int cvc;
+
+    public Card() {
+        super();
+        month = -1;
+        year = -1;
+    }
+
+    public Card(String number, int balance, String password, int month, int year) {
+        super(number, balance, password);
+        this.month = month;
+        this.year = year;
+    }
 
     public int getMonth() {
         return month;
@@ -23,18 +34,10 @@ public class Card extends Account {
         this.year = year;
     }
 
-    public int getCvc() {
-        return cvc;
-    }
 
-    public void setCvc(int cvc) {
-        this.cvc = cvc;
-    }
-
-    public  String toString(){
+    public String toString() {
         return "CreditCard [month = " + this.getMonth()
                 + " year = " + this.getYear()
-                + " cvc = " + this.getCvc()
                 + "]";
     }
 }
