@@ -2,44 +2,29 @@ package NazarV.bank;
 
 
 public class CreditCard extends Card {
-    private int expDate;
-    private int validation;
+    private int creditBalance;
 
     public CreditCard() {
         super();
-        this.expDate = -1;
-        this.validation = -1;
+        creditBalance = -1;
     }
 
-
-    public CreditCard(int validity, int validation) {
-        this.expDate = validity;
-        this.validation = validation;
+    public CreditCard(String number, int balance, String password,
+                      int month, int year, int cvc, int creditBalance) {
+        super(number, balance, password, month, year, cvc);
+        this.creditBalance = creditBalance;
     }
 
-    public int getExpDate() {
-        return expDate;
+    public int getCreditBalance() {
+        return creditBalance;
     }
 
-    public void setExpDate(int expDate) {
-        this.expDate = expDate;
-    }
-
-    public int getValidation() {
-        return validation;
-    }
-
-    public void setValidation(int validation) {
-        this.validation = validation;
+    public void setCreditBalance(int creditBalance) {
+        this.creditBalance = creditBalance;
     }
 
     public String toString() {
 
-        return "CreditCard [expDate = " + this.getExpDate()
-                + " validation = " + this.getValidation()
-                + " month = " + this.getMonth()
-                + " year = " + this.getYear() + "]";
+        return "";
     }
-
-
 }

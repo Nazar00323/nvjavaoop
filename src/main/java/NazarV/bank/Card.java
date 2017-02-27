@@ -3,41 +3,51 @@ package NazarV.bank;
 
 public class Card extends Account {
 
-    private int month;
-    private int year;
+    private int expMonth;
+    private int expYear;
+    private int cvc;
 
     public Card() {
         super();
-        month = -1;
-        year = -1;
+        expMonth = -1;
+        expYear = -1;
+        cvc = -1;
     }
 
-    public Card(String number, int balance, String password, int month, int year) {
+    public Card(String number, int balance, String password, int month, int year, int cvc) {
         super(number, balance, password);
-        this.month = month;
-        this.year = year;
+        this.expMonth = month;
+        this.expYear = year;
+        this.cvc = cvc;
     }
 
-    public int getMonth() {
-        return month;
+    public int getExpMonth() {
+        return expMonth;
     }
 
-    public void setMonth(int month) {
-        this.month = month;
+    public void setExpMonth(int expMonth) {
+        this.expMonth = expMonth;
     }
 
-    public int getYear() {
-        return year;
+    public int getExpYear() {
+        return expYear;
     }
 
-    public void setYear(int year) {
-        this.year = year;
+    public void setExpYear(int expYear) {
+        this.expYear = expYear;
     }
 
+    public int getCvc() {
+        return cvc;
+    }
+
+    public void setCvc(int cvc) {
+        this.cvc = cvc;
+    }
 
     public String toString() {
-        return "CreditCard [month = " + this.getMonth()
-                + " year = " + this.getYear()
+        return "CreditCard [expMonth = " + this.getExpMonth()
+                + " expYear = " + this.getExpYear()
                 + "]";
     }
 }
