@@ -52,4 +52,8 @@ public class DBFactory {
             }
         }
     }
+
+    public static void updateDB() throws SQLException {
+
+    }
 }
