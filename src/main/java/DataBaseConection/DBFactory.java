@@ -55,5 +55,28 @@ public class DBFactory {
 
     public static void updateDB() throws SQLException {
 
+            \
+        Connection connection = null;
+            Statement statement = null;
+            String query = "insert into account " +
+                    "(number,balance,password) " +
+                    "values ('1231243423453452456236','0','12345678')";
+            try {
+                connection = getConnection();
+                statement = connection.createStatement();
+                statement.executeUpdate(query);
+                System.out.println("Рахунок було оновлено");
+            } catch (SQLException e) {
+                System.out.println("Рахунок не оновлено");
+                System.out.println(e.getMessage());
+
+            } finally {
+                if(statement!=null){
+                    statement.close();
+                }
+                if(connection!=null){
+                    connection.close();
+                }
+            }
     }
 }

@@ -16,4 +16,11 @@ public class DBFactoryTest {
         DBFactory.createNewAccount();
     }
 
+    @Test
+
+    public void updateDB() throws Exception{
+
+        DBFactory.updateDB();
+    }
+
  }
