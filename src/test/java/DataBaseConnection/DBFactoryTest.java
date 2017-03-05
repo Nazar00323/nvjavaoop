@@ -5,22 +5,37 @@ import org.junit.Test;
 
 public class DBFactoryTest {
     @Test
+    public void getAccountsTest() throws Exception {
+        DBFactory.getAccounts();
+    }
 
-    public void connectionTest()throws Exception{
+    @Test
+
+    public void connectionTest() throws Exception {
         DBFactory.getConnection();
     }
 
     @Test
 
-    public void createTest()throws  Exception{
-        DBFactory.createNewAccount();
+    public void createTest() throws Exception {
+        //DBFactory.createNewAccount();
+        DBFactory.getAccounts();
+        DBFactory.createNewAccountPS("7777", 5000.0, "7777");
+        DBFactory.getAccounts();
     }
 
     @Test
 
-    public void updateDB() throws Exception{
+    public void updateDB() throws Exception {
 
         DBFactory.updateDB();
     }
 
- }
+
+    @Test
+    public void deleteDB() throws Exception {
+        DBFactory.deleteDB();
+    }
+
+
+}
