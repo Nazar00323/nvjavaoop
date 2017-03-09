@@ -28,14 +28,18 @@ public class DBFactoryTest {
 
     public void updateDB() throws Exception {
 
-        DBFactory.updateDB();
+        //DBFactory.updateDB();
+        DBFactory.updateDBps(1500, "5555" );
+
     }
 
 
     @Test
     public void deleteDB() throws Exception {
-        DBFactory.deleteDB();
+        //DBFactory.deleteDB();
+        DBFactory.deleteDBPS("6666");
     }
+
 
 
 }

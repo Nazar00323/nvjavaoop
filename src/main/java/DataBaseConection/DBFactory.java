@@ -11,6 +11,7 @@ public class DBFactory {
 
     private static final String INSERT_NEW = "INSERT INTO account(number,balance,password) values(?,?,?)";
     private static final String UPDATE_BALANCE = "UPDATE account set balance = ? where number = ? ";
+    private static final String DELETE_ACCOUNT = "DELETE from account where number = ?";
     public static Connection getConnection() {
         Connection connection = null;
 
@@ -40,6 +41,7 @@ public class DBFactory {
             connection = getConnection();
             statement = connection.createStatement();
             statement.executeUpdate(query);
+
             System.out.println("Новий рахунок було створено");
         } catch (SQLException e) {
             System.out.println("Рахунок не було створено");
@@ -145,9 +147,9 @@ public class DBFactory {
 
         try {
             connection = getConnection();
-            prStatment = connection.prepareStatement(INSERT_NEW);
-            prStatment.setString(1, number);
-            prStatment.setDouble(2, balance);
+            prStatment = connection.prepareStatement(UPDATE_BALANCE);
+            prStatment.setString(2, number);
+            prStatment.setDouble(1, balance);
             prStatment.execute();
             System.out.println("Рахунок було оновлено");
         } catch (SQLException e) {
@@ -190,6 +192,31 @@ public class DBFactory {
             }
         }
     }
+     public static void deleteDBPS(String number) throws SQLException {
+
+        Connection connection = null;
+        PreparedStatement prStatment = null;
+        try {
+            connection = getConnection();
+            prStatment = connection.prepareStatement(DELETE_ACCOUNT);
+            prStatment.setString(1, number);
+            prStatment.execute();
+            System.out.println("Рахунок було видалено");
+        } catch (SQLException e) {
+            System.out.println("Рахунок не видалено");
+            System.out.println(e.getMessage());
+
+        } finally {
+            if (prStatment != null) {
+                prStatment.close();
+            }
+            if (connection != null) {
+                connection.close();
+            }
+        }
+    }
+
+
 
 
 }
