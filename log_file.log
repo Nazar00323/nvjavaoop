@@ -1,0 +1,6 @@
+2017-03-09 21:41:50 INFO  DBFactory:26 - Отримано драйвер класу
+2017-03-09 21:41:52 ERROR DBFactory:39 - Неможливо підключитися до бази данних
+2017-03-09 21:41:52 ERROR DBFactory:40 - Unknown database 'bank'
+2017-03-09 21:41:55 INFO  DBFactory:26 - Отримано драйвер класу
+2017-03-09 21:41:56 ERROR DBFactory:39 - Неможливо підключитися до бази данних
+2017-03-09 21:41:56 ERROR DBFactory:40 - Unknown database 'bank'
