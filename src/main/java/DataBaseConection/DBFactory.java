@@ -1,6 +1,8 @@
 package DataBaseConection;
 
 
+import org.apache.log4j.Logger;
+
 import java.sql.*;
 
 public class DBFactory {
@@ -12,21 +14,30 @@ public class DBFactory {
     private static final String INSERT_NEW = "INSERT INTO account(number,balance,password) values(?,?,?)";
     private static final String UPDATE_BALANCE = "UPDATE account set balance = ? where number = ? ";
     private static final String DELETE_ACCOUNT = "DELETE from account where number = ?";
+
+    private static final Logger log = Logger.getLogger(DBFactory.class);
+
     public static Connection getConnection() {
         Connection connection = null;
 
         try {
             Class.forName(DRIVER);
+            System.out.println("Отримано драйвер класу");
+            log.info("Отримано драйвер класу");
         } catch (ClassNotFoundException e) {
             System.out.println("Неможливо отримати клас драйвера ");
+            log.error("Неможливо отримати клас драйвера ");
+            log.error(e.getMessage());
         }
 
         try {
             connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
             System.out.println("Успішне підключення до бази данних");
+            log.info("Успішне підключення до бази данних");
         } catch (SQLException e) {
             System.out.println("Неможливо підключитися до бази данних");
-            e.printStackTrace();
+            log.error("Неможливо підключитися до бази данних");
+            log.error(e.getMessage());
         }
         return connection;
     }
