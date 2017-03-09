@@ -10,7 +10,7 @@ public class DBFactory {
     private static String PASSWORD = "root";
 
     private static final String INSERT_NEW = "INSERT INTO account(number,balance,password) values(?,?,?)";
-
+    private static final String UPDATE_BALANCE = "UPDATE account set balance = ? where number = ? ";
     public static Connection getConnection() {
         Connection connection = null;
 
@@ -117,9 +117,6 @@ public class DBFactory {
     }
 
     public static void updateDB() throws SQLException {
-        /*update clients set name = 'Test' where id=5*/
-
-
         Connection connection = null;
         Statement statement = null;
         String query = "update   account set balance ='1000' where number= '5555' ";
@@ -135,6 +132,31 @@ public class DBFactory {
         } finally {
             if (statement != null) {
                 statement.close();
+            }
+            if (connection != null) {
+                connection.close();
+            }
+        }
+    }
+
+    public static void updateDBps(double balance, String number) throws SQLException {
+        Connection connection = null;
+        PreparedStatement prStatment = null;
+
+        try {
+            connection = getConnection();
+            prStatment = connection.prepareStatement(INSERT_NEW);
+            prStatment.setString(1, number);
+            prStatment.setDouble(2, balance);
+            prStatment.execute();
+            System.out.println("Рахунок було оновлено");
+        } catch (SQLException e) {
+            System.out.println("Рахунок не оновлено");
+            System.out.println(e.getMessage());
+
+        } finally {
+            if (prStatment != null) {
+                prStatment.close();
             }
             if (connection != null) {
                 connection.close();
