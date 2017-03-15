@@ -54,9 +54,11 @@ public class DBFactory {
             statement.executeUpdate(query);
 
             System.out.println("Новий рахунок було створено");
+            log.info("Новий рахунок було створено");
         } catch (SQLException e) {
             System.out.println("Рахунок не було створено");
-            System.out.println(e.getMessage());
+            log.error("Рахунок не було створено");
+            log.error(e.getMessage());
 
         } finally {
             if (statement != null) {
@@ -81,8 +83,10 @@ public class DBFactory {
             prStatment.execute();
 
             System.out.println("Новий рахунок було створено ");
+            log.info("Новий рахунок було створено ");
         } catch (SQLException e) {
             System.out.println("Рахунок не було створено");
+            log.error("Рахунок не було створено");
             System.out.println(e.getMessage());
 
         } finally {
@@ -138,9 +142,11 @@ public class DBFactory {
             statement = connection.createStatement();
             statement.executeUpdate(query);
             System.out.println("Рахунок було оновлено");
+            log.info("Рахунок було оновлено");
         } catch (SQLException e) {
             System.out.println("Рахунок не оновлено");
-            System.out.println(e.getMessage());
+            log.error("Рахунок не оновлено");
+            log.error(e.getMessage());
 
         } finally {
             if (statement != null) {
@@ -190,9 +196,11 @@ public class DBFactory {
             statement = connection.createStatement();
             statement.execute(query);
             System.out.println("Рахунок було видалено");
+            log.info("Рахунок було видалено");
         } catch (SQLException e) {
             System.out.println("Рахунок не видалено");
-            System.out.println(e.getMessage());
+            log.error("Рахунок не видалено");
+            log.error(e.getMessage());
 
         } finally {
             if (statement != null) {
@@ -213,9 +221,11 @@ public class DBFactory {
             prStatment.setString(1, number);
             prStatment.execute();
             System.out.println("Рахунок було видалено");
+            log.info("Рахунок було видалено");
         } catch (SQLException e) {
             System.out.println("Рахунок не видалено");
-            System.out.println(e.getMessage());
+            log.error("Рахунок не видалено");
+            log.error(e.getMessage());
 
         } finally {
             if (prStatment != null) {
