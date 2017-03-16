@@ -30,7 +30,7 @@ public class Runner {
         System.out.println(hm1.toString());
         */
 
-        Account ac1 = new Account();
+       /* Account ac1 = new Account();
         Account ac2 = new Account();
         ac1.information();
         System.out.println(" ");
@@ -53,7 +53,10 @@ public class Runner {
         ac4.getMoney();
 
         System.out.println(" ");
-        ac4.information();
+        ac4.information();*/
+
+
+       Menu.run();
 
 
 

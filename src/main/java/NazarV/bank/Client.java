@@ -1,8 +1,9 @@
 package NazarV.bank;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
-public class Client extends Human {
+public class Client extends Human implements Serializable {
     private String phone;
     private Account clAc;
 
@@ -38,11 +39,13 @@ public class Client extends Human {
         this.phone = input.next();
     }
 
-    public void information() {
-        System.out.println("Client name: " + this.getName());
-        System.out.println("Client surname: " + this.getSurname());
-        System.out.println("Client phone: " + this.phone);
-        //clAc.information();
+    @Override
+    public String toString() {
+        return "Client{" +
+                "name=" + getName() +
+                ", surname=" + getSurname() +
+                ", phone=" + phone +
+                '}';
     }
 }
 
