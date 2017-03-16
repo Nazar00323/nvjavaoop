@@ -118,7 +118,6 @@ public class DBFactory {
                 System.out.println(tempNumber + "\t" + tempBalance + "\t" + tempPassword);
             }
 
-
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         } finally {
@@ -129,8 +128,6 @@ public class DBFactory {
                 connection.close();
             }
         }
-
-
     }
 
     public static void updateDB() throws SQLException {
@@ -183,7 +180,6 @@ public class DBFactory {
         }
     }
 
-
     public static void deleteDB() throws SQLException {
         /*update clients set name = 'Test' where id=5*/
 
@@ -211,7 +207,8 @@ public class DBFactory {
             }
         }
     }
-     public static void deleteDBPS(String number) throws SQLException {
+
+    public static void deleteDBPS(String number) throws SQLException {
 
         Connection connection = null;
         PreparedStatement prStatment = null;
@@ -236,8 +233,5 @@ public class DBFactory {
             }
         }
     }
-
-
-
 
 }
