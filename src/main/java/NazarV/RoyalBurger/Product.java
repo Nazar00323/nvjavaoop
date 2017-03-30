@@ -5,6 +5,7 @@ public class Product {
     private int id;
     private String description;
     private double price;
+    private double bonus;
 
 
     public Product() {

@@ -29,7 +29,7 @@ public class DBFactoryTest {
     public void updateDB() throws Exception {
 
         //DBFactory.updateDB();
-        DBFactory.updateDBps(1500, "5555" );
+        DBFactory.updateDBps(1500, "5555");
 
     }
 
@@ -39,7 +39,6 @@ public class DBFactoryTest {
         //DBFactory.deleteDB();
         DBFactory.deleteDBPS("6666");
     }
-
 
 
 }

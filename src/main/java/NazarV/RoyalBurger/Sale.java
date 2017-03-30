@@ -32,4 +32,13 @@ public class Sale {
     public void setItems(SaleLineItem item) {
         this.items.add(item);
     }
+
+    public double summaryPrice(){
+        double fullPrice = 0;
+        for (SaleLineItem item : items){
+            fullPrice +=  item.subPrice() ;
+        }
+
+        return fullPrice;
+    }
 }

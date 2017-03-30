@@ -30,6 +30,10 @@ public class SaleLineItem {
         this.quantity = quantity;
     }
 
+    public double subPrice(){
+        return item.getPrice()*quantity;
+    }
+
     @Override
     public String toString() {
         return "SaleLineItem{" +
