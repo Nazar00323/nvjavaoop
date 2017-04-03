@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class SaleMenu {
 
-    public static void run() {
+    public static void main(String[] args) {
         int choise = -1;
         do {
             showSaleMenu();
@@ -14,9 +14,9 @@ public class SaleMenu {
     }
 
     private static void showSaleMenu() {
-        System.out.println("----------------------");
-        System.out.println("1 -");
-        System.out.println("2 --");
+        System.out.println("--------------------------");
+        System.out.println("1 - Додати новий продукт");
+        System.out.println("2 - ");
         System.out.println("----------------------");
         System.out.println("0 - Вийти з програми");
     }
@@ -34,18 +34,17 @@ public class SaleMenu {
     }
 
     private static void openChoise(int ch) {
+        Catalog.getData();
         switch (ch) {
             case 0:
                 System.out.println("Дякуємо за співпрацю");
-                break;
+                System.exit(0);
             case 1:
-                System.out.println("  ");
+                Catalog.setProducts();
                 break;
             case 2:
                 System.out.println(" ");
                 break;
-
-
         }
     }
 }
