@@ -1,6 +1,9 @@
 package NazarV.RoyalBurger;
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable{
+    private static final long serialVersionUID = 200L;
     private static int nextId = 1;
     private int id;
     private String description;
@@ -54,6 +57,10 @@ public class Product {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public static void setNextId(int arg){
+        nextId = arg;
     }
 
     @Override

@@ -16,7 +16,7 @@ public class SaleMenu {
     private static void showSaleMenu() {
         System.out.println("--------------------------");
         System.out.println("1 - Додати новий продукт");
-        System.out.println("2 - ");
+        System.out.println("2 - Здійснити покупку");
         System.out.println("----------------------");
         System.out.println("0 - Вийти з програми");
     }
@@ -43,7 +43,7 @@ public class SaleMenu {
                 Catalog.setProducts();
                 break;
             case 2:
-                System.out.println(" ");
+                Catalog.chooseProduct();
                 break;
         }
     }

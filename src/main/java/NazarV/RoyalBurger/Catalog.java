@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Catalog {
     private static ArrayList<Product> products = new ArrayList<Product>();
-    private static final Logger log =  Logger.getLogger(Catalog.class);
+    private static final Logger log = Logger.getLogger(Catalog.class);
 
     public static void setProducts() {
         Scanner input = new Scanner(System.in);
@@ -25,6 +25,26 @@ public class Catalog {
             exit = input.nextInt();
         } while (exit == 0);
         saveData();
+    }
+
+
+    public static Product chooseProduct() {
+        Scanner input = new Scanner(System.in);
+        for (Product product : products) {
+            System.out.println(product.toString());
+        }
+        System.out.print("Вкажіть ID продукту : ");
+        int tempID = input.nextInt();
+        for (int i = 0; i < products.size(); i++) {
+            if (products.get(i).getId() == tempID) {
+                tempID = i;
+                break;
+            }
+
+        }
+
+        return products.get(tempID);
+
     }
 
     private static void saveData() {
@@ -64,6 +84,15 @@ public class Catalog {
             System.out.println(e.getMessage());
             log.info(e.getMessage());
         }
+
+        int maxId = 0;
+        for (Product product : products) {
+            if (product.getId() > maxId) {
+                maxId = product.getId();
+            }
+
+        }
+        Product.setNextId(maxId + 1);
 
     }
 }
