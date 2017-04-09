@@ -4,12 +4,15 @@ import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
 public class Sale {
+    private static int nextID = 1;
+    private int id = 0;
     private GregorianCalendar date = null;
     private ArrayList<SaleLineItem> items = null;
 
     public Sale() {
         date = new GregorianCalendar();
         items = new ArrayList<SaleLineItem>();
+        setId();
     }
 
     public Sale(GregorianCalendar date, ArrayList<SaleLineItem> items) {
@@ -33,6 +36,15 @@ public class Sale {
         this.items.add(item);
     }
 
+    public void setId() {
+        this.id = nextID;
+        nextID++;
+    }
+
+    public static void setNextID(int nextID) {
+        Sale.nextID = nextID;
+    }
+
     public double summaryPrice(){
         double fullPrice = 0;
         for (SaleLineItem item : items){
@@ -40,5 +52,20 @@ public class Sale {
         }
 
         return fullPrice;
+    }
+
+
+    public void addLineItem(Product tempProduct, int quantity) {
+        items.add(new SaleLineItem(tempProduct, quantity));
+    }
+
+    @Override
+    public String toString() {
+        String tempLine = "\n----------------------------------------\n"
+                + "Номер чеку : " + id + "\n"
+                + "ID\tНазва\tЦіна Х 1\tКількість\tВартість\n"
+
+
+        return tempLine;
     }
 }

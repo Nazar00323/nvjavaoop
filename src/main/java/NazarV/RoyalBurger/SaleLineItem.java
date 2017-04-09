@@ -14,6 +14,8 @@ public class SaleLineItem {
         this.quantity = quantity;
     }
 
+
+
     public Product getItem() {
         return item;
     }
