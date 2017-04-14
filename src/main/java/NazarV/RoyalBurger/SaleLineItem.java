@@ -1,6 +1,8 @@
 package NazarV.RoyalBurger;
 
-public class SaleLineItem {
+import java.io.Serializable;
+
+public class SaleLineItem implements Serializable{
     private Product item = null;
     private int quantity;
 
@@ -38,9 +40,6 @@ public class SaleLineItem {
 
     @Override
     public String toString() {
-        return "SaleLineItem{" +
-                "item=" + item.toString() +
-                ", quantity=" + quantity +
-                '}';
+        return item.toString() + quantity+"\t\t\t"+subPrice();
     }
 }

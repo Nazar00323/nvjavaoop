@@ -35,6 +35,7 @@ public class SaleMenu {
 
     private static void openChoise(int ch) {
         Catalog.getData();
+        Register.getData();
         switch (ch) {
             case 0:
                 System.out.println("Дякуємо за співпрацю");
@@ -43,7 +44,7 @@ public class SaleMenu {
                 Catalog.setProducts();
                 break;
             case 2:
-                Catalog.chooseProduct();
+                Register.addItemToSale(Register.createSale());
                 break;
         }
     }

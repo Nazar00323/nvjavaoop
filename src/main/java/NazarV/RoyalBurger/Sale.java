@@ -1,9 +1,11 @@
 package NazarV.RoyalBurger;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-public class Sale {
+public class Sale implements Serializable{
     private static int nextID = 1;
     private int id = 0;
     private GregorianCalendar date = null;
@@ -41,17 +43,26 @@ public class Sale {
         nextID++;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public static void setNextId(int arg){
+        nextID = arg;
+    }
+
     public static void setNextID(int nextID) {
         Sale.nextID = nextID;
     }
 
-    public double summaryPrice(){
+    public double summaryPrice() {
+        double bonus = 0.8;
         double fullPrice = 0;
-        for (SaleLineItem item : items){
-            fullPrice +=  item.subPrice() ;
+        for (SaleLineItem item : items) {
+            fullPrice += item.subPrice();
         }
 
-        return fullPrice;
+        return fullPrice*bonus;
     }
 
 
@@ -63,9 +74,12 @@ public class Sale {
     public String toString() {
         String tempLine = "\n----------------------------------------\n"
                 + "Номер чеку : " + id + "\n"
-                + "ID\tНазва\tЦіна Х 1\tКількість\tВартість\n"
-
-
+                + "ID\tНазва\tЦінаХ1\tКількість\tВартість\n";
+        for (SaleLineItem item : items) {
+            tempLine += item.toString() + "\n";
+        }
+        tempLine += "Загальна суму покупки: \t\t\t" + summaryPrice() + "\n";
+        tempLine += "----------------------------------------\n";
         return tempLine;
     }
 }
