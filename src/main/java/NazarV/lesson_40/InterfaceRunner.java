@@ -15,6 +15,8 @@ public class InterfaceRunner {
 
         ICallback cl4 = new ClientB();
 
+        IStack cl5 = new Client();
+
 
     }
 }

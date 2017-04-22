@@ -26,4 +26,5 @@ public class Runner {
 
         System.out.println("Загальна вартість покупки " + summary );
     }
+
 }

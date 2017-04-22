@@ -1,6 +1,6 @@
 package NazarV.lesson_40;
 
-public class Client implements ICallback, IShow {
+public class Client implements ICallback, IShow,IStack {
     public void callback(int arg) {
         System.out.println("some args = " + arg);
     }
@@ -11,5 +11,9 @@ public class Client implements ICallback, IShow {
 
     public void info() {
         System.out.println("Test code");
+    }
+
+    public void intNumber(int line) {
+
     }
 }

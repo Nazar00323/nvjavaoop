@@ -35,7 +35,7 @@ public class Menu {
         return temp;
     }
 
-    private static void openChoise(int ch){
+    private static void openChoise(int ch) {
         switch (ch) {
             case 0:
                 System.out.println("Дякуємо за співпрацю");

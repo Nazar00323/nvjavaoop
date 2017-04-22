@@ -34,12 +34,12 @@ public class SerializatorManager {
 
     private static void saveData(String path, Object obj) {
         try {
-            FileOutputStream someFile = new FileOutputStream(path + ".ser");
+            FileOutputStream someFile = new FileOutputStream(path + ".sermng");
             ObjectOutputStream someObj = new ObjectOutputStream(someFile);
 
             someObj.writeObject(obj);
 
-            someFile. close();
+            someFile.close();
             someObj.close();
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
@@ -55,7 +55,6 @@ public class SerializatorManager {
         try {
             FileInputStream someFile = new FileInputStream(path + ".ser");
             ObjectInputStream someObj = new ObjectInputStream(someFile);
-
             tempObj = someObj.readObject();
             someFile.close();
             someObj.close();
