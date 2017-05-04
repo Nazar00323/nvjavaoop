@@ -1,5 +1,7 @@
 package NazarV.lesson_43_abstractFactory.TEAM.Factory;
 
+import NazarV.bank.Manager;
+
 public class TeamFactory {
     public static DeveloperFactory createDev(String str) {
         if (str.equalsIgnoreCase("java")) {
@@ -10,4 +12,25 @@ public class TeamFactory {
             throw new RuntimeException(str + " is not defined");
         }
     }
+
+    public static ManagerFactory createMan(String str) {
+        if (str.equalsIgnoreCase("ProjectManager ")) {
+            return new ProjectManagerFactory();
+        } else if (str.equalsIgnoreCase("TeamLead")) {
+            return new TeamLeadFactory();
+        } else {
+            throw new RuntimeException(str + " is not defined");
+        }
+    }
+
+    public static TesterFactory createTest(String str) {
+        if (str.equalsIgnoreCase("QaTesterFactory ")) {
+            return new QaTesterFactory();
+        } else if (str.equalsIgnoreCase("QcTesterFactory")) {
+            return new QcTesterFactory();
+        } else {
+            throw new RuntimeException(str + " is not defined");
+        }
+    }
+
 }
