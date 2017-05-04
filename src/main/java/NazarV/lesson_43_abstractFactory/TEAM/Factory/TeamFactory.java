@@ -14,7 +14,7 @@ public class TeamFactory {
     }
 
     public static ManagerFactory createMan(String str) {
-        if (str.equalsIgnoreCase("ProjectManager ")) {
+        if (str.equalsIgnoreCase("ProjectManager")) {
             return new ProjectManagerFactory();
         } else if (str.equalsIgnoreCase("TeamLead")) {
             return new TeamLeadFactory();
@@ -24,9 +24,9 @@ public class TeamFactory {
     }
 
     public static TesterFactory createTest(String str) {
-        if (str.equalsIgnoreCase("QaTesterFactory ")) {
+        if (str.equalsIgnoreCase("qa")) {
             return new QaTesterFactory();
-        } else if (str.equalsIgnoreCase("QcTesterFactory")) {
+        } else if (str.equalsIgnoreCase("qc")) {
             return new QcTesterFactory();
         } else {
             throw new RuntimeException(str + " is not defined");

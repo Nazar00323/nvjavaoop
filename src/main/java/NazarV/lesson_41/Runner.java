@@ -6,8 +6,14 @@ public class Runner {
         IRead consoleReader = new ConsolRead();
         IPrint consolePrinter = new ConsolePrint();
         IPrint displayPrinter = new DisplayOutput();
-        Replacer replacer = new Replacer(consoleReader, displayPrinter);
 
+        Replacer replacer = new Replacer(consoleReader, displayPrinter);
         replacer.replace();
+
+        System.out.println("Test console printer");
+        Replacer consoleReplacer = new Replacer(consoleReader, consolePrinter);
+        consoleReplacer.replace();
+
+        System.out.println(IPrint.getConstParam());
     }
 }

@@ -13,5 +13,6 @@ public class Replacer {
         String inputLine = reader.readFrom();
         String newLine = inputLine.replace("1","9");
         printer.printTo(newLine);
+        printer.showMessage();
     }
 }

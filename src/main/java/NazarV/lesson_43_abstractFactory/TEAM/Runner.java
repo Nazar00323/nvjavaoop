@@ -7,7 +7,7 @@ import NazarV.lesson_43_abstractFactory.TEAM.Factory.TesterFactory;
 
 public class Runner {
     public static void main(String[] args) {
-        DeveloperFactory devFact = TeamFactory.createDev("csharp");
+        DeveloperFactory devFact = TeamFactory.createDev("java");
         Ideveloper dev1 = devFact.createDeveloper();
         dev1.writeCode();
 
@@ -15,12 +15,8 @@ public class Runner {
         Imanager man1 = manFact.createManager();
         man1.createTask();
 
-        TesterFactory TestFact = TeamFactory.createTest("QaTesterFactory");
+        TesterFactory TestFact = TeamFactory.createTest("qa");
         Itester test1 = TestFact.createTester();
         test1.testCode();
-
-
     }
-
-
 }
