@@ -6,6 +6,15 @@ public class Account {
     private String number;
     private int balance;
     private String password;
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public Account() {
         this.number = this.generateNumber();
