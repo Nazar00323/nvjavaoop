@@ -1,5 +1,7 @@
 package NazarV.bank;
 
+import java.util.Date;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Account {
@@ -41,7 +43,13 @@ public class Account {
     }
 
     public String generateNumber() {
-        return "1231243423453452456236";
+        String number = "";
+        Date curentDate = new Date();
+        Random random = new Random(curentDate.getTime());
+        for (int i = 0; i < 16; i++) {
+            number += String.valueOf(random.nextInt(10));
+        }
+        return number;
     }
 
     public int getBalance() {

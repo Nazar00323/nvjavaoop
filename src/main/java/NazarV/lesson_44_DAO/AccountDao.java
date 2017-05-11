@@ -16,5 +16,4 @@ public interface AccountDao {
 
     public ArrayList<Account> getAll() throws SQLException;
 
-
 }

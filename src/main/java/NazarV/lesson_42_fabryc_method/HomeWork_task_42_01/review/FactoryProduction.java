@@ -7,16 +7,21 @@ public class FactoryProduction {
         Scanner input = new Scanner(System.in);
         String factoryType;
         int quantity;
-        System.out.print("Яку фабрику запустити :");
-        factoryType = input.next();
-        System.out.print("Кількість одиниць продукції :");
-        quantity = input.nextInt();
+        int choise;
+        do {
+            System.out.print("Яку фабрику запустити :");
+            factoryType = input.next();
+            System.out.print("Кількість одиниць продукції :");
+            quantity = input.nextInt();
 
-        for (int i = 1; i <= quantity; i++) {
-            System.out.println("Стільце №" + i);
-            FurnitureProduction.runFactory(factoryType);
-            System.out.println("Завершено\n\n");
-        }
+            for (int i = 1; i <= quantity; i++) {
+                System.out.println("Стільце №" + i);
+                FurnitureProduction.runFactory(factoryType);
+                System.out.println("Завершено\n\n");
+            }
+            System.out.print("Запустити іншу фабрику : (0-НІ/1-ТАК): ");
+           choise = input.nextInt();
+        } while (choise == 1);
 
     }
 }
