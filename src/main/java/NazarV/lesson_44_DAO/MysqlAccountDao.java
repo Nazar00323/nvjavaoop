@@ -20,9 +20,9 @@ public class MysqlAccountDao implements AccountDao {
          String INSERT_NEW = "INSERT INTO account(number,password,balance) values(?,?,?)";
         PreparedStatement prStatment = null;
         Account account = new Account();
+        
 
         try {
-
             prStatment = connection.prepareStatement(INSERT_NEW);
             prStatment.setString(1, number);
             prStatment.setDouble(2, balance);
@@ -44,6 +44,7 @@ public class MysqlAccountDao implements AccountDao {
                 connection.close();
             }
         }
+        return account;
     }
 
     @Override

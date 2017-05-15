@@ -1,5 +1,7 @@
 package NazarV.bank;
 
+import org.apache.commons.lang.RandomStringUtils;
+
 import java.util.Date;
 import java.util.Random;
 import java.util.Scanner;
@@ -43,6 +45,7 @@ public class Account {
     }
 
     public String generateNumber() {
+         final String[] VISA_PREFIX_LIST = new String[] { "4", "5" };
         String number = "";
         Date curentDate = new Date();
         Random random = new Random(curentDate.getTime());
@@ -50,6 +53,16 @@ public class Account {
             number += String.valueOf(random.nextInt(10));
         }
         return number;
+    }
+
+    public String generatePassword() {
+        String password = (" ");
+        Date curentDate = new Date();
+        Random random = new Random(curentDate.getTime());
+        for (int i = 0; i < 4; i++) {
+            password += String.valueOf(random.nextInt(10));
+        }
+        return password;
     }
 
     public int getBalance() {
@@ -86,9 +99,7 @@ public class Account {
     }
 
     public void setPassword() {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Введіть пароль:");
-        this.password = input.next();
+
     }
 
     public String checkPassword() {
