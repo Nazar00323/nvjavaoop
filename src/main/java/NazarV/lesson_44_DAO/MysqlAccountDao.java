@@ -23,15 +23,15 @@ public class MysqlAccountDao implements AccountDao {
         
 
         try {
-            prStatment = connection.prepareStatement(INSERT_NEW);
+           /* prStatment = connection.prepareStatement(INSERT_NEW);
             prStatment.setString(1, number);
             prStatment.setDouble(2, balance);
             prStatment.setString(3, password);
-            prStatment.execute();
+            prStatment.execute();*/
 
             System.out.println("Новий рахунок було створено ");
 
-        } catch (SQLException e) {
+        } catch (Exception e) {
             System.out.println("Рахунок не було створено");
 
             System.out.println(e.getMessage());

@@ -1,7 +1,5 @@
 package NazarV.bank;
 
-import org.apache.commons.lang.RandomStringUtils;
-
 import java.util.Date;
 import java.util.Random;
 import java.util.Scanner;
@@ -12,24 +10,28 @@ public class Account {
     private String password;
     private String id;
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public Account() {
-        this.number = this.generateNumber();
+        this.number = generateNumber();
         this.balance = 0;
-        this.password = "11111111";
+        this.password = generatePassword();
     }
 
     public Account(String number, int balance, String password) {
         this.number = number;
         this.balance = balance;
         this.password = password;
+    }
+
+    public static Account createNew() {
+        return new Account();
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getNumber() {
@@ -44,21 +46,21 @@ public class Account {
         this.number = number;
     }
 
-    public String generateNumber() {
-         final String[] VISA_PREFIX_LIST = new String[] { "4", "5" };
+    private String generateNumber() {
+        final char[] PREFIX = {'4', '5'};
         String number = "";
-        Date curentDate = new Date();
-        Random random = new Random(curentDate.getTime());
+        Random random = new Random();
         for (int i = 0; i < 16; i++) {
             number += String.valueOf(random.nextInt(10));
         }
-        return number;
+        StringBuilder modifiedNumber = new StringBuilder(number);
+        modifiedNumber.setCharAt(0, PREFIX[random.nextInt(2)]);
+        return modifiedNumber.toString();
     }
 
-    public String generatePassword() {
-        String password = (" ");
-        Date curentDate = new Date();
-        Random random = new Random(curentDate.getTime());
+    private String generatePassword() {
+        String password = "";
+        Random random = new Random();
         for (int i = 0; i < 4; i++) {
             password += String.valueOf(random.nextInt(10));
         }
@@ -112,4 +114,13 @@ public class Account {
         System.out.println("Card password :" + this.password);
     }
 
+    @Override
+    public String toString() {
+        return "Account{" +
+                "number='" + number + '\'' +
+                ", balance=" + balance +
+                ", password='" + password + '\'' +
+                ", id='" + id + '\'' +
+                '}';
+    }
 }
