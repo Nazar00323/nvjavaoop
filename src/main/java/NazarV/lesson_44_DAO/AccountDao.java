@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public interface AccountDao {
-    public Account create() throws SQLException;
+    public Account create(Account account) throws SQLException;
 
     public Account read(int key) throws SQLException;
 

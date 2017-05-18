@@ -1,14 +1,13 @@
 package NazarV.bank;
 
-import java.util.Date;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Account {
     private String number;
-    private int balance;
+    private double balance;
     private String password;
-    private String id;
+    private int id;
 
     public Account() {
         this.number = generateNumber();
@@ -22,15 +21,22 @@ public class Account {
         this.password = password;
     }
 
+    public Account(int id, String number, double balance, String password) {
+        this.number = number;
+        this.balance = balance;
+        this.password = password;
+        this.id = id;
+    }
+
     public static Account createNew() {
         return new Account();
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -67,11 +73,11 @@ public class Account {
         return password;
     }
 
-    public int getBalance() {
+    public double getBalance() {
         return balance;
     }
 
-    public void setBalance(int balance) {
+    public void setBalance(double balance) {
         this.balance = balance;
     }
 
@@ -100,8 +106,8 @@ public class Account {
         this.password = pass;
     }
 
-    public void setPassword() {
-
+    public String getPassword(){
+        return password;
     }
 
     public String checkPassword() {

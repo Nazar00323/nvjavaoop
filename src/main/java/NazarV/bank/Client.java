@@ -1,6 +1,7 @@
 package NazarV.bank;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -43,15 +44,19 @@ public class Client extends Human implements Serializable {
         System.out.print("Введіть номер телефону : ");
         this.phone = input.next();
     }
+
     public String generatePhoneNumber() {
-        final String [] PREFIX = {"097"};
-        String phoneNumber = "";
+        final String[] PREFIX = {"097", "068", "050", "099", "067"};
+        final String[] NUMBERS = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
         Random random = new Random();
-        for (int i = 0; i < 10; i++) {
-            phoneNumber += String.valueOf(random.nextLong());
+        Date curdate = new Date();
+        random.setSeed(curdate.getTime());
+        StringBuilder modifiedPhoneNumber = new StringBuilder(10);
+        modifiedPhoneNumber.append(PREFIX[random.nextInt(PREFIX.length)]);
+        for (int i = 0; i < 7; i++) {
+            modifiedPhoneNumber.append(NUMBERS[random.nextInt(NUMBERS.length)]);
         }
-        StringBuilder modifiedPhoneNumber = new StringBuilder(phoneNumber);
-        modifiedPhoneNumber.append( PREFIX[random.nextInt(11)]);
+
         return modifiedPhoneNumber.toString();
     }
 
