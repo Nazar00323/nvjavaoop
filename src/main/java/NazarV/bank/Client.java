@@ -1,6 +1,7 @@
 package NazarV.bank;
 
 import java.io.Serializable;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Client extends Human implements Serializable {
@@ -9,12 +10,16 @@ public class Client extends Human implements Serializable {
 
     public Client() {
         super();
-        this.phone = "0971073443";
+        this.phone = generatePhoneNumber();
     }
 
     public Client(String name, String surname, String phone) {
         super(name, surname);
         this.phone = phone;
+    }
+
+    public static Client createNew() {
+        return new Client();
     }
 
     public void setAccount(Account ac) {
@@ -37,6 +42,17 @@ public class Client extends Human implements Serializable {
         Scanner input = new Scanner(System.in);
         System.out.print("Введіть номер телефону : ");
         this.phone = input.next();
+    }
+    public String generatePhoneNumber() {
+        final String [] PREFIX = {"097"};
+        String phoneNumber = "";
+        Random random = new Random();
+        for (int i = 0; i < 10; i++) {
+            phoneNumber += String.valueOf(random.nextLong());
+        }
+        StringBuilder modifiedPhoneNumber = new StringBuilder(phoneNumber);
+        modifiedPhoneNumber.append( PREFIX[random.nextInt(11)]);
+        return modifiedPhoneNumber.toString();
     }
 
     @Override
