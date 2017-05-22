@@ -1,31 +1,37 @@
 package NazarV.bank;
 
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Account {
+    private int id;
     private String number;
     private double balance;
     private String password;
-    private int id;
+    private GregorianCalendar validity;
 
     public Account() {
         this.number = generateNumber();
         this.balance = 0;
         this.password = generatePassword();
+        this.validity = new GregorianCalendar(Calendar.YEAR + 3, Calendar.MONTH, Calendar.DATE);
     }
 
-    public Account(String number, int balance, String password) {
+    public Account(String number, int balance, String password, GregorianCalendar validity) {
         this.number = number;
         this.balance = balance;
         this.password = password;
+        this.validity = validity;
     }
 
-    public Account(int id, String number, double balance, String password) {
+    public Account(int id, String number, double balance, String password, GregorianCalendar validity) {
         this.number = number;
         this.balance = balance;
         this.password = password;
         this.id = id;
+        this.validity = validity;
     }
 
     public static Account createNew() {
@@ -106,7 +112,7 @@ public class Account {
         this.password = pass;
     }
 
-    public String getPassword(){
+    public String getPassword() {
         return password;
     }
 
@@ -114,10 +120,12 @@ public class Account {
         return password;
     }
 
-    public void information() {
-        System.out.println("Card number :" + this.number);
-        System.out.println("Card balance :" + this.balance);
-        System.out.println("Card password :" + this.password);
+    public GregorianCalendar getValidity() {
+        return validity;
+    }
+
+    public void setValidity(GregorianCalendar validity) {
+        this.validity = validity;
     }
 
     @Override
