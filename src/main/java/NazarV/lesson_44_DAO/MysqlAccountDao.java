@@ -57,6 +57,7 @@ public class MysqlAccountDao implements AccountDao {
                 ac = new Account(tempId,tempNumber,tempBalance,tempPassword);
 
             }
+
         } catch (SQLException e) {
             System.out.println("Помилка отримання інформації про рахунок по id = " + key);
         } finally {
@@ -73,8 +74,39 @@ public class MysqlAccountDao implements AccountDao {
 
     @Override
     public void update(Account account) throws SQLException {
+        Connection connection = null;
+        String UPDATE_QUERY = "UPDATE account set balance = ? where number = ? ";
+        PreparedStatement prStatment = null;
 
+
+        try {
+            prStatment = connection.prepareStatement(UPDATE_QUERY);
+            prStatment = connection.prepareStatement(UPDATE_QUERY);
+            System.out.println("Рахунок було оновлено");
+            ResultSet rs = prStatment.executeQuery();
+            while (rs.next()){
+                double tempBalance = rs.getDouble(1);
+                String tempNumber = rs.getString(2);
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Рахунок не оновлено");
+            System.out.println(e.getMessage());
+
+        } finally {
+            if (prStatment != null) {
+                prStatment.close();
+            }
+            if (connection != null) {
+                connection.close();
+            }
+
+
+        }
     }
+
+
+
 
     @Override
     public void delete(Account account) throws SQLException {
