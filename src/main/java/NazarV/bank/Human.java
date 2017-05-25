@@ -1,19 +1,32 @@
 package NazarV.bank;
 
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.Scanner;
 
 public class Human {
     private String name;
     private String surname;
+    private GregorianCalendar bornDate;
+
+    public GregorianCalendar getBornDate() {
+        return bornDate;
+    }
+
+    public void setBornDate(GregorianCalendar bornDate) {
+        this.bornDate = bornDate;
+    }
 
     public Human() {
         this.name = "Nazar";
         this.surname = "Voychak";
+        this.bornDate = new GregorianCalendar(Calendar.YEAR , Calendar.MONTH, Calendar.DATE);
     }
 
-    public Human(String name, String surname) {
+    public Human(String name, String surname,GregorianCalendar dateOfBirth) {
         this.name = name;
         this.surname = surname;
+        this.bornDate = dateOfBirth;
     }
 
     public String getName() {
