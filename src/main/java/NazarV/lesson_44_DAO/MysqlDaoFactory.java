@@ -34,4 +34,9 @@ public class MysqlDaoFactory implements DaoFactory {
     public AccountDao getAccountDao(Connection connection) throws SQLException {
         return new MysqlAccountDao(connection);
     }
+
+    @Override
+    public ClientDao getClientDao(Connection connection) throws SQLException {
+        return new MysqlClientDao(connection);
+    }
 }

@@ -8,4 +8,6 @@ public interface DaoFactory {
 
     public AccountDao getAccountDao(Connection connection) throws SQLException;
 
+    public ClientDao getClientDao(Connection connection) throws SQLException;
+
 }

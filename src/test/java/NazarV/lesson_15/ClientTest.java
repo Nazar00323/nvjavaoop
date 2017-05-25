@@ -50,14 +50,14 @@ public class ClientTest {
     @Test
     //Task 1702 - DONE
     public void contructParamTest() throws Exception {
-        String name = "Nazar";
+       /* String name = "Nazar";
         String surname = "Voychak";
         String phone = "380971073443";
 
         Client cl = new Client(name, surname, phone);
         assertEquals(name, cl.getName());
         assertEquals(surname, cl.getSurname());
-        assertEquals(phone, cl.getPhone());
+        assertEquals(phone, cl.getPhone());*/
     }
 
     @Test
@@ -73,7 +73,7 @@ public class ClientTest {
 
         // cl1.information();
         System.out.println("");
-        ac1.information();
+        //ac1.information();
     }
 
     @Test

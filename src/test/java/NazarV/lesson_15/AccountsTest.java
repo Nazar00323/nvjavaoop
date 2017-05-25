@@ -24,10 +24,6 @@ public class AccountsTest {
         accArray[3] = acc4;
         accArray[4] = acc5;
 
-        for (int i = 0; i < accArray.length; i++) {
-            accArray[i].information();
-            System.out.println("-------------------");
-        }
         example();
     }
 }

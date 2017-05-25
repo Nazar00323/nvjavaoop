@@ -9,12 +9,18 @@ import java.util.Scanner;
 public class Client extends Human implements Serializable {
     private String phone;
     private Account clAc;
+    private int id;
 
     public Client() {
         super();
         this.phone = generatePhoneNumber();
     }
 
+    public Client(int id,String name, String surname, String phone, GregorianCalendar bornDate) {
+        super(name, surname, bornDate);
+        this.phone = phone;
+        this.id = id;
+    }
     public Client(String name, String surname, String phone, GregorianCalendar bornDate) {
         super(name, surname, bornDate);
         this.phone = phone;
@@ -61,12 +67,18 @@ public class Client extends Human implements Serializable {
         return modifiedPhoneNumber.toString();
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
-        return "Client{" +
-                "name=" + getName() +
-                ", surname=" + getSurname() +
-                ", phone=" + phone +
+        return super.toString()+" phone='" + phone + '\'' +
+                ", id=" + id +
                 '}';
     }
 }

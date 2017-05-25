@@ -9,18 +9,10 @@ public class Human {
     private String surname;
     private GregorianCalendar bornDate;
 
-    public GregorianCalendar getBornDate() {
-        return bornDate;
-    }
-
-    public void setBornDate(GregorianCalendar bornDate) {
-        this.bornDate = bornDate;
-    }
-
     public Human() {
         this.name = "Nazar";
         this.surname = "Voychak";
-        this.bornDate = new GregorianCalendar(Calendar.YEAR , Calendar.MONTH, Calendar.DATE);
+        this.bornDate = new GregorianCalendar();
     }
 
     public Human(String name, String surname,GregorianCalendar dateOfBirth) {
@@ -64,9 +56,22 @@ public class Human {
         this.surname = input.next();
     }
 
-    public  String toString(){
-        return "Human [name = "+ this.getName()
-                + " surname = " + this.getSurname()
-                + "]";
+    public GregorianCalendar getBornDate() {
+        return bornDate;
+    }
+
+    public void setBornDate(GregorianCalendar bornDate) {
+        this.bornDate = bornDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Human{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", bornDate=" + bornDate.get(Calendar.YEAR)+
+                "-"+bornDate.get(Calendar.MONTH)+
+                "-"+bornDate.get(Calendar.DATE)+
+                ' ';
     }
 }

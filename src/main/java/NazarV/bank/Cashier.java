@@ -8,10 +8,10 @@ public class Cashier extends Worker {
         this.cashNumber = -1;
     }
 
-    public Cashier(String name, String surname, String id, String phone, double salary, int cashNumber) {
+   /* public Cashier(String name, String surname, String id, String phone, double salary, int cashNumber) {
         super(name, surname, id, phone, salary);
         this.cashNumber = cashNumber;
-    }
+    }*/
 
     public int getCashNumber() {
         return cashNumber;

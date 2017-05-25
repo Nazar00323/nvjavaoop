@@ -1,5 +1,9 @@
 package NazarV.bank;
 
+import NazarV.lesson_42_fabryc_method.Game.Game;
+
+import java.util.GregorianCalendar;
+
 public class Worker extends Human{
     private String id;
     private String phone;
@@ -12,8 +16,8 @@ public class Worker extends Human{
         this.salary = 5000;
     }
 
-    public Worker(String name, String surname, String id, String phone, double salary) {
-        super(name, surname);
+    public Worker(String name, String surname, String id, String phone, double salary, GregorianCalendar bornDate) {
+        super(name, surname,bornDate);
         this.id = id;
         this.phone = phone;
         this.salary = salary;

@@ -5,9 +5,9 @@ public class Manager extends Worker {
         super();
     }
 
-    public Manager(String name, String surname, String id, String phone, double salary) {
+   /* public Manager(String name, String surname, String id, String phone, double salary) {
         super(name, surname, id, phone, salary);
-    }
+    }*/
 
     @Override
     public void setBonus() {
