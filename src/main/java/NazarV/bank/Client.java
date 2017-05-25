@@ -2,6 +2,7 @@ package NazarV.bank;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -14,8 +15,8 @@ public class Client extends Human implements Serializable {
         this.phone = generatePhoneNumber();
     }
 
-    public Client(String name, String surname, String phone) {
-        super(name, surname);
+    public Client(String name, String surname, String phone, GregorianCalendar bornDate) {
+        super(name, surname, bornDate);
         this.phone = phone;
     }
 
