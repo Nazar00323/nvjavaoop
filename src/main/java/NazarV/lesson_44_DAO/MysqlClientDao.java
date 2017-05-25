@@ -11,6 +11,10 @@ import java.util.ArrayList;
 public class MysqlClientDao implements ClientDao {
     private Connection connection;
 
+    public MysqlClientDao(Connection connection) {
+        this.connection = connection;
+    }
+
 
     @Override
     public Client create(Client client) throws SQLException {
