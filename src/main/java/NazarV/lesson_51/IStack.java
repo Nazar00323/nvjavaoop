@@ -1,4 +1,4 @@
-package NazarV.lesson_40.homeWork;
+package NazarV.lesson_51;
 
 
 public interface IStack {
@@ -8,7 +8,7 @@ public interface IStack {
 
     int top();
 
-    int isEmpty();
+    boolean isEmpty();
 
-    int isFull();
+    boolean isFull();
 }
