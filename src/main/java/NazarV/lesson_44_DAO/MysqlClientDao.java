@@ -1,6 +1,6 @@
 package NazarV.lesson_44_DAO;
 
-import NazarV.bank.Client;
+/*import NazarV.bank.Client;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -167,4 +167,4 @@ public class MysqlClientDao implements ClientDao {
         return new java.sql.Date(gregorianCalendar.getTime().getTime());
     }
 
-}
+}*/
