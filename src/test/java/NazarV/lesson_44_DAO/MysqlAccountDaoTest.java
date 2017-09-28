@@ -1,4 +1,4 @@
-package NazarV.lesson_44_DAO;
+/*package NazarV.lesson_44_DAO;
 
 import NazarV.bank.Account;
 import org.junit.Test;
@@ -64,4 +64,4 @@ public class MysqlAccountDaoTest {
         System.out.println(account.toString());
     }
 
-}
+}*/

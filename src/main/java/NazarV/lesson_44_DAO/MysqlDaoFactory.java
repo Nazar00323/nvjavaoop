@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class MysqlDaoFactory implements DaoFactory {
+/*public class MysqlDaoFactory implements DaoFactory {
     private static String DRIVER = "com.mysql.jdbc.Driver";
     private static String URL = "jdbc:mysql://servlab.mysql.ukraine.com.ua:3306/servlab_nv";
     private static String USERNAME = "servlab_nv";
@@ -34,9 +34,10 @@ public class MysqlDaoFactory implements DaoFactory {
     public AccountDao getAccountDao(Connection connection) throws SQLException {
         return new MysqlAccountDao(connection);
     }
+}
+
 
     @Override
     public ClientDao getClientDao(Connection connection) throws SQLException {
         return new MysqlClientDao(connection);
-    }
-}
+    }*/

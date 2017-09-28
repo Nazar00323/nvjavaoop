@@ -30,9 +30,9 @@ public class Runner {
 
         hm1.setName(hm2);
         System.out.println(hm1.toString());
-        */
 
-       /* Account ac1 = new Account();
+
+       Account ac1 = new Account();
         Account ac2 = new Account();
         ac1.information();
         System.out.println(" ");
@@ -58,8 +58,8 @@ public class Runner {
         ac4.information();*/
 
 
-       // Menu.run();
-       // SaleMenu.run();
+        //Menu.run();
+        //SaleMenu.run();
 
 
 

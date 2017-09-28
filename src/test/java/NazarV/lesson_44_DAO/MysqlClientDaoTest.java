@@ -1,4 +1,4 @@
-package NazarV.lesson_44_DAO;
+/*package NazarV.lesson_44_DAO;
 
 import NazarV.bank.Client;
 import org.junit.Test;
@@ -23,11 +23,11 @@ public class MysqlClientDaoTest {
         MysqlDaoFactory factory = new MysqlDaoFactory();
         ClientDao dao = factory.getClientDao(factory.getConnection());
         Client client = dao.read(2);
-        System.out.println(client.toString());
+        System.out.println(client.toString());*/
 
-    }
+    //}
 
-    @Test
+   /* @Test
     public void update() throws Exception {
         MysqlDaoFactory factory = new MysqlDaoFactory();
         ClientDao dao = factory.getClientDao(factory.getConnection());
@@ -40,7 +40,7 @@ public class MysqlClientDaoTest {
         client = dao.read(2);
         System.out.println(client.toString());
 
-    }
+   // }
 
     @Test
     public void delete() throws Exception {
@@ -63,5 +63,4 @@ public class MysqlClientDaoTest {
         }
 
     }
-
-}
+  */
